@@ -27,6 +27,7 @@ entity SEMAFORO is
     port (
         RESET : in std_logic;
         CLK : in std_logic;
+        CLK2 : in std_logic;
         SENSOR : in std_logic;
         LUZ_R : out std_logic_vector(0 TO 1);
         LUZ_V : out std_logic_vector(0 TO 1);
@@ -37,7 +38,8 @@ architecture behavioral of SEMAFORO  is
     type STATES is (S0, S1, S2, S3, S4, S5);
     signal current_state: STATES := S0;
     signal next_state: STATES;
-    constant k: time := 1000 ms;
+--    constant k: time := 1000 ms;
+    signal k: POSITIVE;
 begin
 state_register: process (RESET, CLK)
 begin
@@ -47,6 +49,9 @@ begin
         current_state <= S0;
     end if;
  end if;
+ if rising_edge(CLK2) then
+    k<=k+1;
+ end if;
     
 end process;
 nextstate_decod: process (SENSOR, current_state)
@@ -55,26 +60,29 @@ nextstate_decod: process (SENSOR, current_state)
  case current_state is
     when S0 =>
         if SENSOR = '1' then
+            k<=0;
             next_state <= S1;
         end if;
-    when S1 =>      
-        wait for 3*k;
-        next_state <= S2;
-    when S2 =>   
-        wait for 3*k;
+    when S1 =>    
+        if k=3 then  
+            next_state <= S2;
+        end if;
+    when S2 => 
+         if k=6 then    
             next_state <= S3;
+         end if;
     when S3 =>
-
-        wait for 20*k;
+         if k=26 then  
             next_state <= S4;
+         end if;
     when S4 =>
-
-        wait for 3*k;
+         if k=29 then  
             next_state <= S5;
+         end if;
     when S5 =>
-
-        wait for 3*k;
+         if k=32 then  
             next_state <= S0;
+         end if;
     when others =>
         next_state <= S0;
  end case;

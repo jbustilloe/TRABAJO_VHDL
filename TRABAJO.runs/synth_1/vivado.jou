@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
-# Vivado v2022.1 (64-bit)
-# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
-# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
-# Start of session at: Fri Nov  4 17:20:35 2022
-# Process ID: 1104
-# Current directory: C:/Users/yagob/Desktop/UNIVERSIDAD/Practicas_SED/P3/Practica_3/Practica_3.runs/synth_1
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Mon Dec 12 17:42:18 2022
+# Process ID: 7396
+# Current directory: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: C:/Users/yagob/Desktop/UNIVERSIDAD/Practicas_SED/P3/Practica_3/Practica_3.runs/synth_1/top.vds
-# Journal file: C:/Users/yagob/Desktop/UNIVERSIDAD/Practicas_SED/P3/Practica_3/Practica_3.runs/synth_1\vivado.jou
+# Log file: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1/top.vds
+# Journal file: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1\vivado.jou
 # Running On: DESKTOP-GS26EEL, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8464 MB
 #-----------------------------------------------------------
 source top.tcl -notrace

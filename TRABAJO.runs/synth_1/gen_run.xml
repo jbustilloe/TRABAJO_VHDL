@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1667578832" LaunchIncrCheckpoint="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO/TRABAJO.srcs/utils_1/imports/synth_1/Practica_3.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1670863335" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Practica_3.dcp">
   <File Type="PA-TCL" Name="top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
   <File Type="RDS-RDS" Name="top.vds"/>
   <File Type="RDS-UTIL" Name="top_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="top_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/EDGEDTCTR.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/EDGEDTCTR.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/EDGEDTCTR.vhd"/>
         <Attr Name="ImportTime" Val="1667578825"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -18,7 +21,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/Practica_3.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/Practica_3.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/Practica_3.vhd"/>
         <Attr Name="ImportTime" Val="1667574130"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -26,7 +29,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/SYNCHRNZR.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/SYNCHRNZR.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/SYNCHRNZR.vhd"/>
         <Attr Name="ImportTime" Val="1667578758"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -34,7 +37,7 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/top.vhd">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/top.vhd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/new/top.vhd"/>
         <Attr Name="ImportTime" Val="1667578830"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -43,7 +46,7 @@
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/bd/design_1/design_1.bd"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/sources_1/bd/design_1/design_1.bd"/>
         <Attr Name="ImportTime" Val="1669033446"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -59,7 +62,7 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/digilent-xdc-master/digilent-xdc-master/Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/digilent-xdc-master/digilent-xdc-master/Nexys-4-DDR-Master.xdc"/>
         <Attr Name="ImportTime" Val="1667577476"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -73,7 +76,7 @@
     <Filter Type="Utils"/>
     <File Path="$PSRCDIR/utils_1/imports/synth_1/Practica_3.dcp">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PPRDIR/../UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/utils_1/imports/synth_1/Practica_3.dcp"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Practicas_SED/P3/Practica_3/Practica_3.srcs/utils_1/imports/synth_1/Practica_3.dcp"/>
         <Attr Name="ImportTime" Val="1667577208"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

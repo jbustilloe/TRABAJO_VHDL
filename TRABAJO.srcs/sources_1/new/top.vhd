@@ -11,7 +11,8 @@ entity top is
            LUZ_A : out std_logic_vector(0 TO 1);
            SENSOR : in STD_LOGIC;
            CLK : in std_logic; 
-           RESET : in std_logic);
+           RESET : in std_logic;
+           CLK2 : in std_logic);
 end top;
 
 architecture Behavioral of top is
@@ -36,6 +37,7 @@ component SEMAFORO is
     port (
         RESET : in std_logic;
         CLK : in std_logic;
+        CLK2 : in std_logic;
         SENSOR : in std_logic;
         LUZ_R : out std_logic_vector(0 TO 1);
         LUZ_V : out std_logic_vector(0 TO 1);
@@ -62,6 +64,7 @@ Inst_contr: EDGEDTCTR PORT MAP
 );
 Inst_P3: SEMAFORO PORT MAP
  (
+    clk2 => clk2,
     CLK => CLK,
     SENSOR => EDGE,
     RESET => RESET,
