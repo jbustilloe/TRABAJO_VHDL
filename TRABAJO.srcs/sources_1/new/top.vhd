@@ -6,18 +6,18 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 entity top is
-    Port ( LUZ_R : out std_logic_vector(0 TO 1);
-           LUZ_V : out std_logic_vector(0 TO 1);
-           LUZ_A : out std_logic_vector(0 TO 1);
-           SENSOR : in STD_LOGIC;
-           CLK : in std_logic; 
-           RESET : in std_logic;
-           CLK2 : in std_logic);
+    Port ( LUZ_R : out std_logic_vector(0 TO 1);--Luces rojas de los semaforos
+           LUZ_V : out std_logic_vector(0 TO 1);--luces verdes de los semaforos
+           LUZ_A : out std_logic_vector(0 TO 1);--Luces ambar de los semaforos
+           SENSOR : in STD_LOGIC;--Sensor que detecta el coche que viene
+           CLK : in std_logic; --Reloj Basico
+           RESET : in std_logic;--Volver al primer estado
+           CLK2 : in std_logic);--reloj para contar los segundos (1Hz)
 end top;
 
 architecture Behavioral of top is
 
-component SYNCHRNZR
+component SYNCHRNZR--sincroniza el reloj con la señal de entrada
     port(
         CLK : in std_logic;
         A_in : in std_logic;
@@ -25,7 +25,7 @@ component SYNCHRNZR
         );
  end component;
  
- component EDGEDTCTR is
+ component EDGEDTCTR is--Evita multiples subidas al activarse el sensor
     port (
         CLK : in std_logic;
         S_IN : in std_logic;
@@ -33,7 +33,7 @@ component SYNCHRNZR
  );
 end component;
 
-component SEMAFORO is
+component SEMAFORO is--Programa que gestiona los estados de los semaforos
     port (
         RESET : in std_logic;
         CLK : in std_logic;
@@ -64,7 +64,7 @@ Inst_contr: EDGEDTCTR PORT MAP
 );
 Inst_P3: SEMAFORO PORT MAP
  (
-    clk2 => clk2,
+    CLK2 => CLK2,
     CLK => CLK,
     SENSOR => EDGE,
     RESET => RESET,

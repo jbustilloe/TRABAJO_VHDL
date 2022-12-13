@@ -86,7 +86,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
   C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/EDGEDTCTR.vhd
-  C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Practica_3.vhd
+  C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd
   C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SYNCHRNZR.vhd
   C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/top.vhd
 }
