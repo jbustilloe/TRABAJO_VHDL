@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Dec 14 19:58:48 2022
+| Date         : Wed Dec 14 20:36:31 2022
 | Host         : DESKTOP-GS26EEL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -31,8 +31,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |   19 |     0 |          0 |     63400 |  0.03 |
-|   LUT as Logic             |   18 |     0 |          0 |     63400 |  0.03 |
+| Slice LUTs*                |   50 |     0 |          0 |     63400 |  0.08 |
+|   LUT as Logic             |   49 |     0 |          0 |     63400 |  0.08 |
 |   LUT as Memory            |    1 |     0 |          0 |     19000 | <0.01 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |    1 |     0 |            |           |       |
@@ -151,18 +151,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |   39 |        Flop & Latch |
+| LUT2     |   32 |                 LUT |
 | LDCE     |   31 |        Flop & Latch |
-| CARRY4   |    8 |          CarryLogic |
+| CARRY4   |   16 |          CarryLogic |
 | OBUF     |    6 |                  IO |
 | LUT4     |    6 |                 LUT |
-| LUT6     |    4 |                 LUT |
+| LUT6     |    5 |                 LUT |
 | LUT3     |    4 |                 LUT |
 | IBUF     |    4 |                  IO |
-| LUT5     |    3 |                 LUT |
+| LUT5     |    2 |                 LUT |
 | LUT1     |    2 |                 LUT |
 | BUFG     |    2 |               Clock |
 | SRL16E   |    1 |  Distributed Memory |
-| LUT2     |    1 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 

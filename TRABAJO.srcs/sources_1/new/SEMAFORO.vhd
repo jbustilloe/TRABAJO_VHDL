@@ -36,9 +36,10 @@ architecture behavioral of SEMAFORO  is
     type STATES is (S0, S1, S2, S3, S4, S5);--los estados son posibles conbinaciones de los dos semaforos
     signal current_state: STATES := S0;--Indica el estado en el que se encuentra el programa
     signal next_state: STATES;--Indica el siguiente estado
-    signal k: NATURAL;--Numero de segundos que han pasado desde el inicio de la secuencia
+    signal k: NATURAL ;--Numero de segundos que han pasado desde el inicio de la secuencia
+    signal tiempo_inicio: NATURAL;
 begin
-state_register: process (RESET, CLK)
+state_register: process (RESET, CLK, CLK2)
 begin
  if rising_edge(CLK ) then
     current_state<=next_state;--introduce el siguiente estado en el estado actual
@@ -47,35 +48,35 @@ begin
     end if;
  end if;
  if rising_edge(CLK2) then--con cada flanco de subida del reloj de 1Hz la variable k sube 1
-    k<=k+1;
+    k<= k + 1;
  end if;
     
 end process;
-nextstate_decod: process (SENSOR, current_state)
+nextstate_decod: process (SENSOR, current_state, k)
  begin
     next_state <= current_state;
  case current_state is--cambio de un estado a otro
     when S0 =>
         if SENSOR = '1' then--cuando el sensor detecta un coche empezamos la secuencia de ambos semaforos
-            k<=0;
+            tiempo_inicio<=k;
             next_state <= S1;--se enciende la luz ambar del semaforo principal
         end if;
     when S1 =>    
-        if k=3 then  --a los tres segundos el primer semaforo se pone en rojo
+        if (k-tiempo_inicio)=3 then  --a los tres segundos el primer semaforo se pone en rojo
             next_state <= S2;
         end if;
     when S2 => 
-         if k=6 then   --tras otros 3s de seguridad el segundo semaforo se pone en verde 
+         if (k-tiempo_inicio)=6 then   --tras otros 3s de seguridad el segundo semaforo se pone en verde 
             next_state <= S3;  
-         elsif k=32 then  --finalente el semaforo se pone en rojo y vuelve al primer estado en el que el primer semaforo esta en verde
+         elsif (k-tiempo_inicio)=32 then  --finalente el semaforo se pone en rojo y vuelve al primer estado en el que el primer semaforo esta en verde
             next_state <= S0;
          end if;
     when S3 =>
-         if k=26 then  --el semaforo permanece en verde 20s , para que pasen los coches que esten parados pasen y luego se pone en ambar
+         if (k-tiempo_inicio)=26 then  --el semaforo permanece en verde 20s , para que pasen los coches que esten parados pasen y luego se pone en ambar
             next_state <= S4;
          end if;
     when S4 =>
-         if k=29 then  --El semaforo permanece en ambar 3s 
+         if (k-tiempo_inicio)=29 then  --El semaforo permanece en ambar 3s 
             next_state <= S2;
          end if;
     when others =>--En caso de error se vuelve al primer estado
