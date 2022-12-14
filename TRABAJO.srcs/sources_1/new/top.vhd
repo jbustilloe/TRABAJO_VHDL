@@ -17,7 +17,7 @@ end top;
 
 architecture Behavioral of top is
 
-component SYNCHRNZR--sincroniza el reloj con la señal de entrada
+component SYNCHRNZR--sincroniza el reloj con la seÃ±al de entrada
     port(
         CLK : in std_logic;
         A_in : in std_logic;
@@ -70,7 +70,7 @@ Inst_P3: SEMAFORO PORT MAP
     RESET => RESET,
     LUZ_R =>LUZ_R,
     LUZ_A =>LUZ_A,
-    LUZ_V =>LUZ_V,
+    LUZ_V =>LUZ_V
 );
 
 end Behavioral;
