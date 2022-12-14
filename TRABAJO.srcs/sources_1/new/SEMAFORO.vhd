@@ -36,7 +36,7 @@ architecture behavioral of SEMAFORO  is
     type STATES is (S0, S1, S2, S3, S4, S5);--los estados son posibles conbinaciones de los dos semaforos
     signal current_state: STATES := S0;--Indica el estado en el que se encuentra el programa
     signal next_state: STATES;--Indica el siguiente estado
-    signal k: POSITIVE;--Numero de segundos que han pasado desde el inicio de la secuencia
+    signal k: NATURAL;--Numero de segundos que han pasado desde el inicio de la secuencia
 begin
 state_register: process (RESET, CLK)
 begin
