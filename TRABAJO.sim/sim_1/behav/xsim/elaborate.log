@@ -1,0 +1,8 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-1537] value -52 is out of target constraint range 0 to 2147483647 [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd:40]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
