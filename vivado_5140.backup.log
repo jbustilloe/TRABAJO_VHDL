@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Dec 16 11:55:29 2022
-# Process ID: 18328
+# Start of session at: Fri Dec 16 19:13:01 2022
+# Process ID: 5140
 # Current directory: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent132 C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1988 C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.xpr
 # Log file: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/vivado.log
 # Journal file: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL\vivado.jou
 # Running On: DESKTOP-GS26EEL, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8464 MB
@@ -81,14 +81,11 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 1256.895 ; gain = 465.793
-update_compile_order -fileset sources_1
-close [ open C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd w ]
-add_files C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd
+open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:10 . Memory (MB): peak = 1204.934 ; gain = 426.609
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'top'
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
@@ -96,49 +93,32 @@ INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/EDGEDTCTR.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'EDGEDTCTR'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'SEMAFORO'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SYNCHRNZR.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top'
+"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot top_behav xil_defaultlib.top -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot top_behav xil_defaultlib.top -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
-Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
-Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
-Compiling architecture behavioral of entity xil_defaultlib.top
-Built simulation snapshot top_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
+   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-source top.tcl
+open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
+source tb_SEMAFORO.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -149,329 +129,104 @@ source top.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1306.711 ; gain = 46.375
-run all
-run 50 s
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 60 s
+run: Time (s): cpu = 00:01:03 ; elapsed = 00:00:52 . Memory (MB): peak = 1247.773 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 15628 KB (Peak: 15628 KB), Simulation CPU Usage: 19437 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SEMAFORO'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
+Compiling architecture tb of entity xil_defaultlib.tb_semaforo
+Built simulation snapshot tb_SEMAFORO_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
+source tb_SEMAFORO.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 60 s
+run: Time (s): cpu = 00:02:35 ; elapsed = 00:02:26 . Memory (MB): peak = 1247.773 ; gain = 0.000
+close [ open C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd w ]
+add_files C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd
+update_compile_order -fileset sources_1
 reset_run synth_1
 INFO: [Project 1-1161] Replacing file C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/utils_1/imports/synth_1/Practica_3.dcp with file C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1/top.dcp
 WARNING: [Vivado 12-1017] Problems encountered:
 1. Failed to delete one or more files in run directory C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1
 
 launch_runs synth_1 -jobs 4
-[Fri Dec 16 12:26:34 2022] Launched synth_1...
+WARNING: [filemgmt 20-1318] Duplicate Design Unit 'tb_SEMAFORO(tb)' found in library 'xil_defaultlib'
+	(Active) Duplicate found at line 27 of file C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd
+Duplicate found at line 28 of file C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd
+[Fri Dec 16 19:31:21 2022] Launched synth_1...
 Run output will be captured here: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1/runme.log
-open_run synth_1 -name synth_1
-Design is defaulting to impl run constrset: constrs_1
-Design is defaulting to synth run part: xc7a100tcsg324-1
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1537.172 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 16 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2022.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/constrs_1/imports/digilent-xdc-master/Nexys-4-DDR-Master.xdc]
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1651.086 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1
 
-open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:10 . Memory (MB): peak = 1764.234 ; gain = 457.523
-run 50 s
-set_property top tb_SEMAFORO [current_fileset]
-update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 4
+[Fri Dec 16 19:32:04 2022] Launched synth_1...
+Run output will be captured here: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.runs/synth_1/runme.log
+restart
+INFO: [Wavedata 42-604] Simulation restarted
 close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'top'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj top_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot top_behav xil_defaultlib.top -log elaborate.log"
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot top_behav xil_defaultlib.top -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source top.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.234 ; gain = 0.000
-launch_simulation -mode post-synthesis -type functional
-Command: launch_simulation  -mode post-synthesis -type functional
-INFO: [Vivado 12-12493] Simulation top is 'top'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching post-synthesis functional simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
-INFO: [SIM-utils-24] Writing simulation netlist file for design 'synth_1'...
-INFO: [SIM-utils-25] write_verilog -mode funcsim -nolib -force -file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim/top_func_synth.v"
-INFO: [SIM-utils-36] Netlist generated:C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim/top_func_synth.v
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim'
-"xvlog --incr --relax -prj top_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim/top_func_synth.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module EDGEDTCTR
-INFO: [VRFC 10-311] analyzing module SEMAFORO
-INFO: [VRFC 10-311] analyzing module SYNCHRNZR
-INFO: [VRFC 10-311] analyzing module top
-INFO: [VRFC 10-311] analyzing module glbl
-"xvhdl --incr --relax -prj top_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/EDGEDTCTR.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'EDGEDTCTR'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'SEMAFORO'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SYNCHRNZR.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'top'
-INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/synth/func/xsim'
-INFO: [Common 17-41] Interrupt caught. Command should exit soon.
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot top_func_synth xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot top_func_synth xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
-Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
-Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
-Compiling architecture behavioral of entity xil_defaultlib.top
-Built simulation snapshot top_func_synth
-INFO: [Common 17-344] 'run_program' was cancelled
-INFO: [Vivado 12-5357] 'elaborate' step aborted
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2267.234 ; gain = 0.000
-INFO: [Common 17-344] 'launch_simulation' was cancelled
-set_property top top [current_fileset]
-update_compile_order -fileset sources_1
-file mkdir C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sim_1/new
-set_property SOURCE_SET sources_1 [get_filesets sim_1]
-close [ open C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sim_1/new/Sim_Tb.vhd w ]
-add_files -fileset sim_1 C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sim_1/new/Sim_Tb.vhd
-update_compile_order -fileset sim_1
-export_ip_user_files -of_objects  [get_files C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sim_1/new/Sim_Tb.vhd] -no_script -reset -force -quiet
-remove_files  -fileset sim_1 C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sim_1/new/Sim_Tb.vhd
-set_property top tb_SEMAFORO [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sim_1\new\Sim_Tb.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\SEMAFORO.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\Testbench.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\top.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sim_1\new\Sim_Tb.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\SEMAFORO.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\Testbench.vhd:]
-WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\top.vhd:]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
-run 50 s
-run 50 s
-run 50 s
-run 50 s
-run 50 s
-run 100 s
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
-set_property top tb_SEMAFORO [current_fileset]
-update_compile_order -fileset sources_1
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO'
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
-Compiling architecture tb of entity xil_defaultlib.tb_semaforo
-Built simulation snapshot tb_SEMAFORO_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_SEMAFORO.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 2285.000 ; gain = 1.777
-run 100 s
-run: Time (s): cpu = 00:01:27 ; elapsed = 00:01:13 . Memory (MB): peak = 2285.398 ; gain = 0.398
-close_sim
-INFO: xsimkernel Simulation Memory Usage: 16152 KB (Peak: 16152 KB), Simulation CPU Usage: 25015 ms
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
-Compiling architecture tb of entity xil_defaultlib.tb_semaforo
-Built simulation snapshot tb_SEMAFORO_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_SEMAFORO.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2287.426 ; gain = 2.027
-run 100 s
-run: Time (s): cpu = 00:02:06 ; elapsed = 00:01:48 . Memory (MB): peak = 2287.793 ; gain = 0.367
-close_sim
-INFO: xsimkernel Simulation Memory Usage: 15544 KB (Peak: 15544 KB), Simulation CPU Usage: 37905 ms
+INFO: xsimkernel Simulation Memory Usage: 15676 KB (Peak: 15676 KB), Simulation CPU Usage: 51906 ms
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
 Command: launch_simulation 
@@ -501,148 +256,6 @@ Starting static elaboration
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_SEMAFORO.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 2287.793 ; gain = 0.000
-run 100 s
-run: Time (s): cpu = 00:02:24 ; elapsed = 00:02:05 . Memory (MB): peak = 2289.668 ; gain = 1.875
-close_sim
-INFO: xsimkernel Simulation Memory Usage: 15616 KB (Peak: 15616 KB), Simulation CPU Usage: 44515 ms
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
-Compiling architecture tb of entity xil_defaultlib.tb_semaforo
-Built simulation snapshot tb_SEMAFORO_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Time resolution is 1 ps
-source tb_SEMAFORO.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2290.246 ; gain = 0.441
-run 100 s
-run: Time (s): cpu = 00:00:44 ; elapsed = 00:00:37 . Memory (MB): peak = 2290.246 ; gain = 0.000
-restart
-INFO: [Wavedata 42-604] Simulation restarted
-run 100 s
-run: Time (s): cpu = 00:02:40 ; elapsed = 00:02:18 . Memory (MB): peak = 2290.594 ; gain = 0.348
-restart
-INFO: [Wavedata 42-604] Simulation restarted
-run all
-run: Time (s): cpu = 00:02:32 ; elapsed = 00:02:13 . Memory (MB): peak = 2290.711 ; gain = 0.117
-save_wave_config {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg}
-add_files -fileset sim_1 -norecurse C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
-set_property xsim.view C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg [get_filesets sim_1]
-set_property top top [current_fileset]
-update_compile_order -fileset sources_1
-close_sim
-INFO: xsimkernel Simulation Memory Usage: 15712 KB (Peak: 15712 KB), Simulation CPU Usage: 113640 ms
-INFO: [Simtcl 6-16] Simulation closed
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
-WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
-WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'SEMAFORO'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
-Vivado Simulator v2022.2
-Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-WARNING: [VRFC 10-1537] value -52 is out of target constraint range 0 to 2147483647 [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd:40]
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
-Compiling architecture tb of entity xil_defaultlib.tb_semaforo
-Built simulation snapshot tb_SEMAFORO_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -663,19 +276,33 @@ source tb_SEMAFORO.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 2305.578 ; gain = 14.867
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1247.773 ; gain = 0.000
 restart
 INFO: [Wavedata 42-604] Simulation restarted
 run 60 s
-run: Time (s): cpu = 00:02:46 ; elapsed = 00:02:21 . Memory (MB): peak = 2305.594 ; gain = 0.016
-set_property top tb_SEMAFORO [current_fileset]
-update_compile_order -fileset sources_1
-close_sim
-INFO: xsimkernel Simulation Memory Usage: 15644 KB (Peak: 15644 KB), Simulation CPU Usage: 52264 ms
-INFO: [Simtcl 6-16] Simulation closed
+run: Time (s): cpu = 00:01:25 ; elapsed = 00:01:17 . Memory (MB): peak = 1247.773 ; gain = 0.000
+set_property top tb_SEMAFORO2 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\testbench2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\SEMAFORO.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\Testbench.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\testbench2.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\SEMAFORO.vhd:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO.srcs\sources_1\new\Testbench.vhd:]
 launch_simulation
 Command: launch_simulation 
-INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO'
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim/simulate.log"
+relaunch_sim
+INFO: xsimkernel Simulation Memory Usage: 15600 KB (Peak: 15600 KB), Simulation CPU Usage: 27999 ms
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
 WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
 WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
 INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
@@ -683,33 +310,99 @@ INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
 INFO: [USF-XSim-7] Finding pre-compiled libraries...
 INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO' in fileset 'sim_1'...
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO2' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
 INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj tb_SEMAFORO_vhdl.prj"
+"xvhdl --incr --relax -prj tb_SEMAFORO2_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO2'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
+Compiling architecture tb of entity xil_defaultlib.tb_semaforo2
+Built simulation snapshot tb_SEMAFORO2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 60 s
+run: Time (s): cpu = 00:02:39 ; elapsed = 00:02:24 . Memory (MB): peak = 1247.773 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 15572 KB (Peak: 15572 KB), Simulation CPU Usage: 54171 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_SEMAFORO2_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO'
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
-"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log"
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log"
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO_behav xil_defaultlib.tb_SEMAFORO -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
-WARNING: [VRFC 10-1537] value -52 is out of target constraint range 0 to 2147483647 [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd:40]
 Completed static elaboration
 INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
 INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
+   with args "tb_SEMAFORO2_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO2} -tclbatch {tb_SEMAFORO2.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
 open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
-source tb_SEMAFORO.tcl
+WARNING: Simulation object /tb_SEMAFORO/RESET was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/SENSOR was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_R was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_V was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_A was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbSimEnded was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod2 was not found in the design.
+source tb_SEMAFORO2.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
 #   if { [llength [get_objects]] > 0} {
@@ -720,7 +413,258 @@ source tb_SEMAFORO.tcl
 #   }
 # }
 # run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO2_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2313.582 ; gain = 7.988
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 60 s
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+run: Time (s): cpu = 00:00:02 ; elapsed = 00:00:09 . Memory (MB): peak = 1247.773 ; gain = 0.000
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 8236 KB (Peak: 8236 KB), Simulation CPU Usage: 14093 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_SEMAFORO2_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO2'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
+Compiling architecture tb of entity xil_defaultlib.tb_semaforo2
+Built simulation snapshot tb_SEMAFORO2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_SEMAFORO2_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO2} -tclbatch {tb_SEMAFORO2.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
+WARNING: Simulation object /tb_SEMAFORO/RESET was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/SENSOR was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_R was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_V was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_A was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbSimEnded was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod2 was not found in the design.
+source tb_SEMAFORO2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1247.773 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+set_property top tb_SEMAFORO2 [current_fileset]
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_SEMAFORO2_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/Testbench.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO2'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
+Compiling architecture tb of entity xil_defaultlib.tb_semaforo2
+Built simulation snapshot tb_SEMAFORO2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_SEMAFORO2_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO2} -tclbatch {tb_SEMAFORO2.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
+WARNING: Simulation object /tb_SEMAFORO/RESET was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/SENSOR was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_R was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_V was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_A was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbSimEnded was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod2 was not found in the design.
+source tb_SEMAFORO2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1247.773 ; gain = 0.000
+run 60 s
+run: Time (s): cpu = 00:01:52 ; elapsed = 00:01:37 . Memory (MB): peak = 1247.773 ; gain = 0.000
+run 120 s
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 120 s
+run: Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 120 s
+run: Time (s): cpu = 00:01:59 ; elapsed = 00:01:42 . Memory (MB): peak = 1247.773 ; gain = 0.000
+set_property top top [current_fileset]
+update_compile_order -fileset sources_1
+close_sim
+INFO: xsimkernel Simulation Memory Usage: 15628 KB (Peak: 15628 KB), Simulation CPU Usage: 114421 ms
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'tb_SEMAFORO2'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2022.2/data/xsim/xsim.ini' copied to run dir:'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_SEMAFORO2' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_SEMAFORO2_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/SEMAFORO.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SEMAFORO'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.srcs/sources_1/new/testbench2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_SEMAFORO2'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip -L xpm --snapshot tb_SEMAFORO2_behav xil_defaultlib.tb_SEMAFORO2 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling architecture behavioral of entity xil_defaultlib.SEMAFORO [semaforo_default]
+Compiling architecture tb of entity xil_defaultlib.tb_semaforo2
+Built simulation snapshot tb_SEMAFORO2_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_SEMAFORO2_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO2} -tclbatch {tb_SEMAFORO2.tcl} -view {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/SIMULACION_SEMAFORO_behav.wcfg
+WARNING: Simulation object /tb_SEMAFORO/RESET was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/CLK2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/SENSOR was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_R was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_V was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/LUZ_A was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbClock2 was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbSimEnded was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod was not found in the design.
+WARNING: Simulation object /tb_SEMAFORO/TbPeriod2 was not found in the design.
+source tb_SEMAFORO2.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO2_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1247.773 ; gain = 0.000
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run 120 s
 restart

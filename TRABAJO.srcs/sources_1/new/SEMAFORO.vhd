@@ -37,7 +37,8 @@ architecture behavioral of SEMAFORO  is
     signal current_state: STATES := S0;--Indica el estado en el que se encuentra el programa
     signal next_state: STATES;--Indica el siguiente estado
     signal k: NATURAL ;--Numero de segundos que han pasado desde el inicio de la secuencia
-    signal tiempo_inicio: NATURAL := -52;
+    signal tiempo_inicio: NATURAL;
+    signal a: NATURAL := 0;
 begin
 state_register: process (RESET, CLK, CLK2)
 begin
@@ -47,18 +48,22 @@ begin
         current_state <= S0;
     end if;
  end if;
- if rising_edge(CLK2) then--con cada flanco de subida del reloj de 1Hz la variable k sube 1
+ if rising_edge(CLK2) then--Con el primer flanco de subida comienza la maquina de estados
     k<= k + 1;
  end if;
     
 end process;
 nextstate_decod: process (SENSOR, current_state, k)
  begin
+ 
     next_state <= current_state;
  case current_state is--cambio de un estado a otro
     when S0 =>
-        if SENSOR = '1' and (k-tiempo_inicio)>=52 then--cuando el sensor detecta un coche empezamos la secuencia de ambos semaforos
-            --tienen que haber pasado almenos 20s desde la ultima vez que se inicio la secuencia.
+        if SENSOR = '1' and a=0 then --El programa debe esperar almenos 20s entre una secuencia y la siguiente.
+            tiempo_inicio<=k;
+            next_state <= S1;--se enciende la luz ambar del semaforo principal
+            a<=1;
+        elsif SENSOR = '1' and (k-tiempo_inicio)>=45 and a/=0 then
             tiempo_inicio<=k;
             next_state <= S1;--se enciende la luz ambar del semaforo principal
         end if;
