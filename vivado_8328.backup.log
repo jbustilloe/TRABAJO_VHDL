@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Tue Dec 20 20:43:05 2022
-# Process ID: 11792
+# Start of session at: Tue Dec 20 19:33:37 2022
+# Process ID: 8328
 # Current directory: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7812 C:\Users\yagob\Desktop\UNIVERSIDAD_5\Sistemas Electronicos Digitales\Trabajo VHDL\TRABAJO2\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6444 C:\Users\yagob\Desktop\UNIVERSIDAD_5\Sistemas Electronicos Digitales\Trabajo VHDL\TRABAJO2\project_1\project_1.xpr
 # Log file: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/vivado.log
 # Journal file: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1\vivado.jou
 # Running On: DESKTOP-GS26EEL, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8464 MB
@@ -84,7 +84,7 @@ WARNING: [Board 49-151] The current board 'digilentinc.com::nexys4_ddr:1.1' is f
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:09 . Memory (MB): peak = 1120.566 ; gain = 209.191
+open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 1121.668 ; gain = 181.699
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
@@ -115,11 +115,9 @@ INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -view {{C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/tb_SEMAFORO_behav.wcfg}} -log {simulate.log}"
+   with args "tb_SEMAFORO_behav -key {Behavioral:sim_1:Functional:tb_SEMAFORO} -tclbatch {tb_SEMAFORO.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
 Time resolution is 1 ps
-open_wave_config {C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/tb_SEMAFORO_behav.wcfg}
-WARNING: Simulation object /tb_SEMAFORO/dut/current_state was not found in the design.
 source tb_SEMAFORO.tcl
 # set curr_wave [current_wave_config]
 # if { [string length $curr_wave] == 0 } {
@@ -133,57 +131,11 @@ source tb_SEMAFORO.tcl
 # run 1000ns
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_SEMAFORO_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1143.000 ; gain = 22.434
+launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:08 . Memory (MB): peak = 1170.145 ; gain = 11.250
 run 50 s
-run: Time (s): cpu = 00:01:43 ; elapsed = 00:01:26 . Memory (MB): peak = 1144.852 ; gain = 1.852
-save_wave_config {C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/tb_SEMAFORO_behav.wcfg}
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1/top.dcp
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1
-
-launch_runs synth_1 -jobs 4
-[Tue Dec 20 20:46:27 2022] Launched synth_1...
-Run output will be captured here: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1/runme.log
+run: Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 1170.145 ; gain = 0.000
 close_sim
-INFO: xsimkernel Simulation Memory Usage: 15588 KB (Peak: 15588 KB), Simulation CPU Usage: 43265 ms
+INFO: xsimkernel Simulation Memory Usage: 18104 KB (Peak: 18104 KB), Simulation CPU Usage: 22389 ms
 INFO: [Simtcl 6-16] Simulation closed
-launch_runs impl_1 -jobs 4
-[Tue Dec 20 20:47:22 2022] Launched impl_1...
-Run output will be captured here: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/impl_1/runme.log
-reset_run synth_1
-INFO: [Project 1-1161] Replacing file C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp with file C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1/top.dcp
-launch_runs synth_1 -jobs 4
-[Tue Dec 20 20:50:38 2022] Launched synth_1...
-Run output will be captured here: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1/runme.log
-launch_runs impl_1 -jobs 4
-[Tue Dec 20 20:52:16 2022] Launched impl_1...
-Run output will be captured here: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/impl_1/runme.log
-launch_runs impl_1 -to_step write_bitstream -jobs 4
-[Tue Dec 20 20:54:19 2022] Launched impl_1...
-Run output will be captured here: C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/impl_1/runme.log
-open_run impl_1
-INFO: [Device 21-403] Loading part xc7a100tcsg324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1519.766 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2022.2
-INFO: [Project 1-570] Preparing netlist for logic optimization
-INFO: [Timing 38-478] Restoring timing data from binary archive.
-INFO: [Timing 38-479] Binary timing data restore complete.
-INFO: [Project 1-856] Restoring constraints from binary archive.
-INFO: [Project 1-853] Binary constraint restore complete.
-Reading XDEF placement.
-Reading placer database...
-Reading XDEF routing.
-Read XDEF Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2199.156 ; gain = 0.000
-Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
-Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 2199.156 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2199.156 ; gain = 0.000
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-open_run: Time (s): cpu = 00:00:22 ; elapsed = 00:00:17 . Memory (MB): peak = 2323.383 ; gain = 1167.648
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 20 20:56:16 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 20 19:36:17 2022...
