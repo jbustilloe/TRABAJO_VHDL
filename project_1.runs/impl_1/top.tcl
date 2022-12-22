@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/impl_1/top.tcl"
+  variable script "C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -125,7 +125,7 @@ set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 2
   open_checkpoint top_routed.dcp
-  set_property webtalk.parent_dir {C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.cache/wt} [current_project]
+  set_property webtalk.parent_dir C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.cache/wt [current_project]
 set_property TOP top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
