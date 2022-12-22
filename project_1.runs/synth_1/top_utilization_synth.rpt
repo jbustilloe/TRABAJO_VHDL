@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec 20 20:51:30 2022
+| Date         : Thu Dec 22 13:47:42 2022
 | Host         : DESKTOP-GS26EEL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   67 |     0 |          0 |     63400 |  0.11 |
-|   LUT as Logic          |   67 |     0 |          0 |     63400 |  0.11 |
+| Slice LUTs*             |   65 |     0 |          0 |     63400 |  0.10 |
+|   LUT as Logic          |   65 |     0 |          0 |     63400 |  0.10 |
 |   LUT as Memory         |    0 |     0 |          0 |     19000 |  0.00 |
 | Slice Registers         |   68 |     0 |          0 |    126800 |  0.05 |
 |   Register as Flip Flop |   36 |     0 |          0 |    126800 |  0.03 |
@@ -114,7 +114,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    2 |     0 |          0 |        32 |  6.25 |
+| BUFGCTRL   |    3 |     0 |          0 |        32 |  9.38 |
 | BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
@@ -148,18 +148,18 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     |   62 |                 LUT |
+| LUT2     |   67 |                 LUT |
 | FDRE     |   35 |        Flop & Latch |
 | LDCE     |   32 |        Flop & Latch |
 | CARRY4   |   20 |          CarryLogic |
 | OBUF     |    6 |                  IO |
-| LUT4     |    6 |                 LUT |
-| LUT6     |    5 |                 LUT |
-| LUT3     |    5 |                 LUT |
+| LUT6     |    4 |                 LUT |
+| LUT4     |    4 |                 LUT |
+| LUT3     |    3 |                 LUT |
 | LUT1     |    3 |                 LUT |
 | IBUF     |    3 |                  IO |
-| LUT5     |    2 |                 LUT |
-| BUFG     |    2 |               Clock |
+| BUFG     |    3 |               Clock |
+| LUT5     |    1 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
