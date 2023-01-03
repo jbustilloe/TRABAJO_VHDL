@@ -25,6 +25,14 @@ component Reloj is
         );
 end component;
 
+component SYNCHRNZR
+    port(
+        CLK : in std_logic;
+        CLK2_in : in std_logic;
+        CLK2_out : out std_logic
+        );
+ end component;
+
 component SEMAFORO is--Programa que gestiona los estados de los semaforos
     port (
         RESET : in std_logic;
@@ -49,9 +57,16 @@ Inst_REL: Reloj PORT MAP
     RESET=>RESET
  );
 
+Inst_syncro: SYNCHRNZR PORT MAP
+ (
+    CLK => CLK,
+    CLK2_in => CLK2,
+    CLK2_out => synk_out
+);
+
 Inst_SEM: SEMAFORO PORT MAP
  (
-    CLK2 => CLK2,
+    CLK2 => synk_out,
     CLK => CLK,
     SENSOR => SENSOR,
     RESET => RESET,

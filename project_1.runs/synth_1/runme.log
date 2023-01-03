@@ -10,9 +10,9 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 378.262 ; gain = 64.188
-Command: read_checkpoint -auto_incremental -incremental {C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp}
-INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 376.496 ; gain = 61.207
+Command: read_checkpoint -auto_incremental -incremental C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/utils_1/imports/synth_1/top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/utils_1/imports/synth_1/top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top top -part xc7a100tcsg324-1
 Starting synth_design
@@ -23,37 +23,40 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 7512
+INFO: [Synth 8-7075] Helper process launched with PID 2256
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1209.777 ; gain = 408.477
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1208.363 ; gain = 409.246
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Top.vhd:15]
-INFO: [Synth 8-3491] module 'Reloj' declared at 'C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Reloj.vhd:15' bound to instance 'Inst_REL' of component 'Reloj' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Top.vhd:45]
-INFO: [Synth 8-638] synthesizing module 'Reloj' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Reloj.vhd:22]
-INFO: [Synth 8-256] done synthesizing module 'Reloj' (0#1) [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Reloj.vhd:22]
-INFO: [Synth 8-3491] module 'SEMAFORO' declared at 'C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:5' bound to instance 'Inst_SEM' of component 'SEMAFORO' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Top.vhd:52]
-INFO: [Synth 8-638] synthesizing module 'SEMAFORO' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:16]
-WARNING: [Synth 8-614] signal 'CLK2' is read in the process but is not in the sensitivity list [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:27]
-WARNING: [Synth 8-614] signal 'a' is read in the process but is not in the sensitivity list [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:41]
-WARNING: [Synth 8-614] signal 'tiempo_inicio' is read in the process but is not in the sensitivity list [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:41]
-INFO: [Synth 8-256] done synthesizing module 'SEMAFORO' (0#1) [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:16]
-INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/Top.vhd:15]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Top.vhd:15]
+INFO: [Synth 8-3491] module 'Reloj' declared at 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Reloj.vhd:15' bound to instance 'Inst_REL' of component 'Reloj' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Top.vhd:53]
+INFO: [Synth 8-638] synthesizing module 'Reloj' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Reloj.vhd:22]
+INFO: [Synth 8-256] done synthesizing module 'Reloj' (0#1) [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Reloj.vhd:22]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/syncro.vhd:5' bound to instance 'Inst_syncro' of component 'SYNCHRNZR' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Top.vhd:60]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/syncro.vhd:12]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (0#1) [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/syncro.vhd:12]
+INFO: [Synth 8-3491] module 'SEMAFORO' declared at 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:5' bound to instance 'Inst_SEM' of component 'SEMAFORO' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Top.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'SEMAFORO' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:16]
+WARNING: [Synth 8-614] signal 'CLK2' is read in the process but is not in the sensitivity list [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:27]
+WARNING: [Synth 8-614] signal 'a' is read in the process but is not in the sensitivity list [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:41]
+WARNING: [Synth 8-614] signal 'tiempo_inicio' is read in the process but is not in the sensitivity list [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'SEMAFORO' (0#1) [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'top' (0#1) [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/Top.vhd:15]
 WARNING: [Synth 8-7129] Port CLK in module Reloj is either unconnected or has no load
 WARNING: [Synth 8-7129] Port RESET in module Reloj is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.129 ; gain = 497.828
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1297.008 ; gain = 497.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.129 ; gain = 497.828
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1297.008 ; gain = 497.891
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1299.129 ; gain = 497.828
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1297.008 ; gain = 497.891
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1299.129 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1297.008 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -64,29 +67,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1346.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1359.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1346.230 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1359.414 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'SEMAFORO'
 ---------------------------------------------------------------------------------------------------
@@ -99,10 +102,10 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
                       s4 |                            10000 |                              100
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'SEMAFORO'
-WARNING: [Synth 8-327] inferring latch for variable 'a_reg' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:47]
-WARNING: [Synth 8-327] inferring latch for variable 'tiempo_inicio_reg' [C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.srcs/sources_1/new/SEMAFORO.vhd:48]
+WARNING: [Synth 8-327] inferring latch for variable 'a_reg' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:47]
+WARNING: [Synth 8-327] inferring latch for variable 'tiempo_inicio_reg' [C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.srcs/sources_1/new/SEMAFORO.vhd:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -110,6 +113,9 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   3 Input   32 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
 +---Muxes : 
 	   5 Input    5 Bit        Muxes := 1     
 	   5 Input    2 Bit        Muxes := 1     
@@ -133,25 +139,25 @@ Start Cross Boundary and Area Optimization
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 WARNING: [Synth 8-3332] Sequential element (Inst_SEM/a_reg[1]) is unused and will be removed from module top.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -169,37 +175,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+--------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                 | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+--------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|top         | Inst_syncro/CLK2_out_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+--------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -215,7 +235,7 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     3|
+|1     |BUFG   |     2|
 |2     |CARRY4 |    20|
 |3     |LUT1   |     3|
 |4     |LUT2   |    67|
@@ -223,34 +243,35 @@ Report Cell Usage:
 |6     |LUT4   |     4|
 |7     |LUT5   |     1|
 |8     |LUT6   |     4|
-|9     |FDRE   |    35|
-|10    |FDSE   |     1|
-|11    |LD     |    32|
-|12    |IBUF   |     3|
-|13    |OBUF   |     6|
+|9     |SRL16E |     1|
+|10    |FDRE   |    36|
+|11    |FDSE   |     1|
+|12    |LD     |    32|
+|13    |IBUF   |     3|
+|14    |OBUF   |     6|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 1346.230 ; gain = 497.828
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1346.230 ; gain = 544.930
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1359.414 ; gain = 497.891
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1359.414 ; gain = 560.297
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1346.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1359.414 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 52 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1346.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1359.414 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 32 instances were transformed.
   LD => LDCE: 32 instances
 
-Synth Design complete, checksum: a3536bf4
+Synth Design complete, checksum: 3a529c99
 INFO: [Common 17-83] Releasing license: Synthesis
-33 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
+36 Infos, 9 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1346.230 ; gain = 940.531
-INFO: [Common 17-1381] The checkpoint 'C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:38 ; elapsed = 00:00:46 . Memory (MB): peak = 1359.414 ; gain = 955.613
+INFO: [Common 17-1381] The checkpoint 'C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 22 13:47:42 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Jan  3 10:23:55 2023...

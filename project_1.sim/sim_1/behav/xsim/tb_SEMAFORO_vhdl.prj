@@ -3,6 +3,7 @@ vhdl xil_defaultlib  \
 "../../../../project_1.srcs/sources_1/new/Reloj.vhd" \
 "../../../../project_1.srcs/sources_1/new/SEMAFORO.vhd" \
 "../../../../project_1.srcs/sources_1/new/Top.vhd" \
+"../../../../project_1.srcs/sources_1/new/syncro.vhd" \
 "../../../../project_1.srcs/sources_1/new/tb_SEMAFORO.vhd" \
 
 # Do not sort compile order
