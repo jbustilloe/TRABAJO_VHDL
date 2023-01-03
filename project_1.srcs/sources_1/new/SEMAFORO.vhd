@@ -7,13 +7,14 @@ entity SEMAFORO is
         RESET : in std_logic;
         CLK : in std_logic;
         CLK2 : in std_logic;
+        CLK2_a: in std_logic;
         SENSOR : in std_logic;
         LUZ_R : out std_logic_vector(0 TO 1);
         LUZ_V : out std_logic_vector(0 TO 1);
         LUZ_A : out std_logic_vector(0 TO 1)
         );
 end SEMAFORO ;
-architecture behavioral of SEMAFORO  is
+    architecture behavioral of SEMAFORO  is
     type STATES is (S0, S1, S2, S3, S4, S5);--los estados son posibles conbinaciones de los dos semaforos
     signal current_state: STATES := S0;--Indica el estado en el que se encuentra el programa
     signal next_state: STATES;--Indica el siguiente estado
@@ -33,7 +34,7 @@ begin
         current_state <= S0;
     end if;
  end if;
- if rising_edge(CLK2) then--Con el primer flanco de subida comienza la maquina de estados
+ if rising_edge(CLK2_a) then--Con el primer flanco de subida comienza la maquina de estados
     k<= k + 1;
  end if;
     

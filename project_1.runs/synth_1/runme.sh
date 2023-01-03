@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/yagob/Desktop/UNIVERSIDAD_5/Sistemas Electronicos Digitales/Trabajo VHDL/TRABAJO2/project_1/project_1.runs/synth_1'
+HD_PWD='C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

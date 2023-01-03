@@ -6,9 +6,10 @@ end tb_SEMAFORO3;
 
 architecture tb of tb_SEMAFORO3 is
 
-    component TOP
+        component TOP
         port (RESET  : in std_logic;
               CLK    : in std_logic;
+              CLK2_a : in std_logic;
               SENSOR : in std_logic;
               LUZ_R  : out std_logic_vector (0 to 1);
               LUZ_V  : out std_logic_vector (0 to 1);
@@ -17,6 +18,7 @@ architecture tb of tb_SEMAFORO3 is
 
     signal RESET  : std_logic;
     signal CLK    : std_logic;
+    signal CLK2_a : std_logic;
     signal SENSOR : std_logic;
     signal LUZ_R  : std_logic_vector (0 to 1);
     signal LUZ_V  : std_logic_vector (0 to 1);
@@ -25,6 +27,7 @@ architecture tb of tb_SEMAFORO3 is
     constant TbPeriod : time := 1000 ns;
     constant TbPeriod2 : time := 1000000000 ns;
     signal TbClock : std_logic := '0';
+    signal TbClock2 : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
 
 begin
@@ -32,6 +35,7 @@ begin
     dut : TOP
     port map (RESET  => RESET,
               CLK    => CLK,
+              CLK2_a => CLK2_a,
               SENSOR => SENSOR,
               LUZ_R  => LUZ_R,
               LUZ_V  => LUZ_V,
@@ -40,7 +44,8 @@ begin
     -- Clock generation
     TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
     CLK <= TbClock;
-    
+    TbClock2 <= not TbClock2 after TbPeriod2/2 when TbSimEnded /= '1' else '0';
+    CLK2_a <= TbClock;
 
     stimuli : process
     begin
