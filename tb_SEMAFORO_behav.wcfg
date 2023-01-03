@@ -3,64 +3,64 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="tb_SEMAFORO3_behav.wdb" id="1">
+      <db_ref path="tb_SEMAFORO2_behav.wdb" id="1">
          <top_modules>
-            <top_module name="tb_SEMAFORO3" />
+            <top_module name="tb_SEMAFORO2" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000000000 s"></ZoomStartTime>
-      <ZoomEndTime time="85.623151820297 s"></ZoomEndTime>
-      <Cursor1Time time="67.890652500000 s"></Cursor1Time>
+      <ZoomStartTime time="0.068873500000 s"></ZoomStartTime>
+      <ZoomEndTime time="67.168873500001 s"></ZoomEndTime>
+      <Cursor1Time time="48.414286500000 s"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="100"></ValueColumnWidth>
+      <ValueColumnWidth column_width="84"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="11" />
-   <wvobject fp_name="/tb_SEMAFORO3/CLK" type="logic">
+   <wvobject fp_name="/tb_SEMAFORO2/dut/CLK" type="logic">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/SENSOR" type="logic">
-      <obj_property name="ElementShortName">SENSOR</obj_property>
-      <obj_property name="ObjectShortName">SENSOR</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/CLK2" type="logic">
+   <wvobject fp_name="/tb_SEMAFORO2/dut/CLK2" type="logic">
       <obj_property name="ElementShortName">CLK2</obj_property>
       <obj_property name="ObjectShortName">CLK2</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/LUZ_R[0]" type="logic">
-      <obj_property name="ElementShortName">[0]</obj_property>
-      <obj_property name="ObjectShortName">[0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/LUZ_A[0]" type="logic">
-      <obj_property name="ElementShortName">[0]</obj_property>
-      <obj_property name="ObjectShortName">[0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/LUZ_V[0]" type="logic">
-      <obj_property name="ElementShortName">[0]</obj_property>
-      <obj_property name="ObjectShortName">[0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/LUZ_R[1]" type="logic">
-      <obj_property name="ElementShortName">[1]</obj_property>
-      <obj_property name="ObjectShortName">[1]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/LUZ_A[1]" type="logic">
-      <obj_property name="ElementShortName">[1]</obj_property>
-      <obj_property name="ObjectShortName">[1]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/LUZ_V[1]" type="logic">
-      <obj_property name="ElementShortName">[1]</obj_property>
-      <obj_property name="ObjectShortName">[1]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/k" type="other">
+   <wvobject fp_name="/tb_SEMAFORO2/dut/k" type="other">
       <obj_property name="ElementShortName">k</obj_property>
       <obj_property name="ObjectShortName">k</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_SEMAFORO3/dut/Inst_SEM/tiempo_inicio" type="other">
-      <obj_property name="ElementShortName">tiempo_inicio</obj_property>
-      <obj_property name="ObjectShortName">tiempo_inicio</obj_property>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/RESET" type="logic">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/SENSOR" type="logic">
+      <obj_property name="ElementShortName">SENSOR</obj_property>
+      <obj_property name="ObjectShortName">SENSOR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/LUZ_R[0]" type="logic">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/LUZ_A[0]" type="logic">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/LUZ_V[0]" type="logic">
+      <obj_property name="ElementShortName">[0]</obj_property>
+      <obj_property name="ObjectShortName">[0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/LUZ_R[1]" type="logic">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/LUZ_A[1]" type="logic">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_SEMAFORO2/dut/LUZ_V[1]" type="logic">
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
    </wvobject>
 </wave_config>

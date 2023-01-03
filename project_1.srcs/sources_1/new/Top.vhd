@@ -8,20 +8,20 @@ entity top is
            LUZ_A : out std_logic_vector(0 TO 1);--Luces ambar de los semaforos
            SENSOR : in STD_LOGIC;--Sensor que detecta el coche que viene
            CLK : in std_logic; --Reloj Basico
-          -- CLK2 : in std_logic;--reloj para contar los segundos (1Hz)
            RESET : in std_logic);--Volver al primer estado
 end top;
 
 architecture Behavioral of top is
 
 signal CLK2 :std_logic ;
-
+signal k : natural;
 
 component Reloj is
     port(
         CLK : in std_logic;
         RESET : in std_logic;
-        CLK2 : out std_logic
+        CLK2 : out std_logic;
+        k: out natural
         );
 end component;
 
@@ -30,6 +30,7 @@ component SEMAFORO is--Programa que gestiona los estados de los semaforos
         RESET : in std_logic;
         CLK : in std_logic;
         CLK2 : in std_logic;
+        k : in natural;
         SENSOR : in std_logic;
         LUZ_R : out std_logic_vector(0 TO 1);
         LUZ_V : out std_logic_vector(0 TO 1);
@@ -46,13 +47,15 @@ Inst_REL: Reloj PORT MAP
 (
     CLK2 => CLK2,
     CLK=>CLK,
-    RESET=>RESET
+    RESET=>RESET,
+    k=>k
  );
 
 Inst_SEM: SEMAFORO PORT MAP
  (
     CLK2 => CLK2,
     CLK => CLK,
+    k=>k,
     SENSOR => SENSOR,
     RESET => RESET,
     LUZ_R =>LUZ_R,
