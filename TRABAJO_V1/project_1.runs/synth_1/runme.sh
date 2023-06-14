@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/project_1.runs/synth_1'
+HD_PWD='C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log tb_SEMAFORO3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_SEMAFORO3.tcl
+EAStep vivado -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl

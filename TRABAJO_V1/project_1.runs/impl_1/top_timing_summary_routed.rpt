@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Dec 22 13:49:15 2022
-| Host         : DESKTOP-GS26EEL running 64-bit major release  (build 9200)
+| Date         : Wed Jun 14 18:00:22 2023
+| Host         : DESKTOP-F1T6GG3 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
 | Device       : 7a100t-csg324
@@ -41,9 +41,8 @@ Timing Summary Report
 
 Rule       Severity          Description                     Violations  
 ---------  ----------------  ------------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell     36          
+TIMING-17  Critical Warning  Non-clocked sequential cell     72          
 TIMING-20  Warning           Non-clocked latch               32          
-TIMING-23  Warning           Combinational loop found        1           
 LATCH-1    Advisory          Existing latches in the design  1           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
@@ -54,30 +53,28 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (131)
+1. checking no_clock (167)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (76)
+4. checking unconstrained_internal_endpoints (246)
 5. checking no_input_delay (2)
 6. checking no_output_delay (6)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
-9. checking loops (1)
+9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (131)
+1. checking no_clock (167)
 --------------------------
- There are 5 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+ There are 72 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
 
  There are 32 register/latch pins with no clock driven by root clock pin: SENSOR (HIGH)
 
  There are 32 register/latch pins with no clock driven by root clock pin: Inst_SEM/FSM_onehot_current_state_reg[0]/Q (HIGH)
 
  There are 31 register/latch pins with no clock driven by root clock pin: Inst_SEM/a_reg[0]/Q (HIGH)
-
- There are 31 register/latch pins with no clock driven by root clock pin: clk_BUFG_inst/O (HIGH)
 
 
 2. checking constant_clock (0)
@@ -90,9 +87,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (76)
--------------------------------------------------
- There are 76 pins that are not constrained for maximum delay. (HIGH)
+4. checking unconstrained_internal_endpoints (246)
+--------------------------------------------------
+ There are 246 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -123,9 +120,9 @@ Table of Contents
  There are 0 generated clocks that are not connected to a clock source.
 
 
-9. checking loops (1)
+9. checking loops (0)
 ---------------------
- There is 1 combinational loop in the design. (HIGH)
+ There are 0 combinational loops in the design.
 
 
 10. checking partial_input_delay (0)
@@ -151,7 +148,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                   82          inf        0.000                      0                   82           NA           NA                      NA                    NA  
+        inf        0.000                      0                  252          inf        0.000                      0                  252           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -220,113 +217,55 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay            82 Endpoints
-Min Delay            82 Endpoints
+Max Delay           252 Endpoints
+Min Delay           252 Endpoints
 --------------------------------------------------------------------------------------
 
 
 Max Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 Inst_SEM/FSM_onehot_current_state_reg[2]/C
-                            (rising edge-triggered cell FDRE)
+  Source:                 Inst_SEM/FSM_onehot_current_state_reg[0]/C
+                            (rising edge-triggered cell FDSE)
   Destination:            LUZ_R[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        8.129ns  (logic 4.134ns (50.854%)  route 3.995ns (49.146%))
-  Logic Levels:           3  (FDRE=1 LUT3=1 OBUF=1)
+  Data Path Delay:        8.164ns  (logic 4.196ns (51.396%)  route 3.968ns (48.604%))
+  Logic Levels:           3  (FDSE=1 LUT3=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y100         FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[2]/C
-    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/FSM_onehot_current_state_reg[2]/Q
-                         net (fo=4, routed)           0.668     1.124    Inst_SEM/FSM_onehot_current_state_reg_n_0_[2]
-    SLICE_X1Y101         LUT3 (Prop_lut3_I0_O)        0.124     1.248 r  Inst_SEM/LUZ_R_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           3.327     4.575    LUZ_R_OBUF[1]
-    V14                  OBUF (Prop_obuf_I_O)         3.554     8.129 r  LUZ_R_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     8.129    LUZ_R[1]
+    SLICE_X2Y96          FDSE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[0]/C
+    SLICE_X2Y96          FDSE (Prop_fdse_C_Q)         0.518     0.518 r  Inst_SEM/FSM_onehot_current_state_reg[0]/Q
+                         net (fo=5, routed)           0.823     1.341    Inst_SEM/Q[0]
+    SLICE_X0Y96          LUT3 (Prop_lut3_I2_O)        0.124     1.465 r  Inst_SEM/LUZ_R_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           3.145     4.610    LUZ_R_OBUF[1]
+    V14                  OBUF (Prop_obuf_I_O)         3.554     8.164 r  LUZ_R_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     8.164    LUZ_R[1]
     V14                                                               r  LUZ_R[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Inst_SEM/k_reg[8]/C
+  Source:                 Inst_SEM/FSM_onehot_current_state_reg[3]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[0]/CE
+  Destination:            LUZ_R[0]
+                            (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.297ns  (logic 2.314ns (31.713%)  route 4.983ns (68.287%))
-  Logic Levels:           10  (CARRY4=5 FDRE=1 LUT2=2 LUT6=2)
+  Data Path Delay:        7.674ns  (logic 4.489ns (58.502%)  route 3.184ns (41.498%))
+  Logic Levels:           3  (FDRE=1 LUT3=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X3Y99          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[8]/C
-    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/k_reg[8]/Q
-                         net (fo=4, routed)           1.251     1.707    Inst_SEM/k_reg[8]
-    SLICE_X2Y99          LUT2 (Prop_lut2_I0_O)        0.124     1.831 r  Inst_SEM/next_state2_carry__0_i_18/O
-                         net (fo=1, routed)           0.000     1.831    Inst_SEM/next_state2_carry__0_i_18_n_0
-    SLICE_X2Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     2.344 r  Inst_SEM/next_state2_carry__0_i_10/CO[3]
-                         net (fo=1, routed)           0.001     2.344    Inst_SEM/next_state2_carry__0_i_10_n_0
-    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.461 r  Inst_SEM/next_state2_carry__0_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.461    Inst_SEM/next_state2_carry__0_i_9_n_0
-    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.578 r  Inst_SEM/next_state2_carry__1_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.578    Inst_SEM/next_state2_carry__1_i_10_n_0
-    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.695 r  Inst_SEM/next_state2_carry__1_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.695    Inst_SEM/next_state2_carry__1_i_9_n_0
-    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     3.010 f  Inst_SEM/next_state2_carry__2_i_10/O[3]
-                         net (fo=3, routed)           0.811     3.822    Inst_SEM/next_state3[27]
-    SLICE_X1Y102         LUT2 (Prop_lut2_I1_O)        0.307     4.129 f  Inst_SEM/FSM_onehot_current_state[4]_i_9/O
-                         net (fo=1, routed)           1.123     5.252    Inst_SEM/FSM_onehot_current_state[4]_i_9_n_0
-    SLICE_X1Y102         LUT6 (Prop_lut6_I0_O)        0.124     5.376 r  Inst_SEM/FSM_onehot_current_state[4]_i_4/O
-                         net (fo=1, routed)           0.800     6.176    Inst_SEM/FSM_onehot_current_state[4]_i_4_n_0
-    SLICE_X1Y100         LUT6 (Prop_lut6_I1_O)        0.124     6.300 r  Inst_SEM/FSM_onehot_current_state[4]_i_2/O
-                         net (fo=5, routed)           0.997     7.297    Inst_SEM/FSM_onehot_current_state[4]_i_2_n_0
-    SLICE_X0Y101         FDSE                                         r  Inst_SEM/FSM_onehot_current_state_reg[0]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[8]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[1]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.297ns  (logic 2.314ns (31.713%)  route 4.983ns (68.287%))
-  Logic Levels:           10  (CARRY4=5 FDRE=1 LUT2=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y99          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[8]/C
-    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/k_reg[8]/Q
-                         net (fo=4, routed)           1.251     1.707    Inst_SEM/k_reg[8]
-    SLICE_X2Y99          LUT2 (Prop_lut2_I0_O)        0.124     1.831 r  Inst_SEM/next_state2_carry__0_i_18/O
-                         net (fo=1, routed)           0.000     1.831    Inst_SEM/next_state2_carry__0_i_18_n_0
-    SLICE_X2Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     2.344 r  Inst_SEM/next_state2_carry__0_i_10/CO[3]
-                         net (fo=1, routed)           0.001     2.344    Inst_SEM/next_state2_carry__0_i_10_n_0
-    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.461 r  Inst_SEM/next_state2_carry__0_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.461    Inst_SEM/next_state2_carry__0_i_9_n_0
-    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.578 r  Inst_SEM/next_state2_carry__1_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.578    Inst_SEM/next_state2_carry__1_i_10_n_0
-    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.695 r  Inst_SEM/next_state2_carry__1_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.695    Inst_SEM/next_state2_carry__1_i_9_n_0
-    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     3.010 f  Inst_SEM/next_state2_carry__2_i_10/O[3]
-                         net (fo=3, routed)           0.811     3.822    Inst_SEM/next_state3[27]
-    SLICE_X1Y102         LUT2 (Prop_lut2_I1_O)        0.307     4.129 f  Inst_SEM/FSM_onehot_current_state[4]_i_9/O
-                         net (fo=1, routed)           1.123     5.252    Inst_SEM/FSM_onehot_current_state[4]_i_9_n_0
-    SLICE_X1Y102         LUT6 (Prop_lut6_I0_O)        0.124     5.376 r  Inst_SEM/FSM_onehot_current_state[4]_i_4/O
-                         net (fo=1, routed)           0.800     6.176    Inst_SEM/FSM_onehot_current_state[4]_i_4_n_0
-    SLICE_X1Y100         LUT6 (Prop_lut6_I1_O)        0.124     6.300 r  Inst_SEM/FSM_onehot_current_state[4]_i_2/O
-                         net (fo=5, routed)           0.997     7.297    Inst_SEM/FSM_onehot_current_state[4]_i_2_n_0
-    SLICE_X0Y101         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[1]/CE
+    SLICE_X2Y96          FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[3]/C
+    SLICE_X2Y96          FDRE (Prop_fdre_C_Q)         0.478     0.478 r  Inst_SEM/FSM_onehot_current_state_reg[3]/Q
+                         net (fo=4, routed)           0.915     1.393    Inst_SEM/Q[3]
+    SLICE_X0Y96          LUT3 (Prop_lut3_I1_O)        0.289     1.682 r  Inst_SEM/LUZ_R_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           2.269     3.951    LUZ_R_OBUF[0]
+    H17                  OBUF (Prop_obuf_I_O)         3.722     7.674 r  LUZ_R_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     7.674    LUZ_R[0]
+    H17                                                               r  LUZ_R[0] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -336,16 +275,16 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.203ns  (logic 4.025ns (55.879%)  route 3.178ns (44.121%))
+  Data Path Delay:        7.380ns  (logic 4.218ns (57.153%)  route 3.162ns (42.847%))
   Logic Levels:           2  (FDRE=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y100         FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[3]/C
-    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/FSM_onehot_current_state_reg[3]/Q
-                         net (fo=4, routed)           3.178     3.634    LUZ_V_OBUF[1]
-    V11                  OBUF (Prop_obuf_I_O)         3.569     7.203 r  LUZ_V_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     7.203    LUZ_V[1]
+    SLICE_X2Y96          FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[3]/C
+    SLICE_X2Y96          FDRE (Prop_fdre_C_Q)         0.478     0.478 r  Inst_SEM/FSM_onehot_current_state_reg[3]/Q
+                         net (fo=4, routed)           3.162     3.640    LUZ_V_OBUF[1]
+    V11                  OBUF (Prop_obuf_I_O)         3.740     7.380 r  LUZ_V_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     7.380    LUZ_V[1]
     V11                                                               r  LUZ_V[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
@@ -356,159 +295,66 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.169ns  (logic 4.026ns (56.164%)  route 3.143ns (43.836%))
+  Data Path Delay:        7.167ns  (logic 4.088ns (57.046%)  route 3.078ns (42.954%))
   Logic Levels:           2  (FDRE=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y100         FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[4]/C
-    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/FSM_onehot_current_state_reg[4]/Q
-                         net (fo=4, routed)           3.143     3.599    LUZ_A_OBUF[1]
-    V12                  OBUF (Prop_obuf_I_O)         3.570     7.169 r  LUZ_A_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     7.169    LUZ_A[1]
+    SLICE_X2Y96          FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[4]/C
+    SLICE_X2Y96          FDRE (Prop_fdre_C_Q)         0.518     0.518 r  Inst_SEM/FSM_onehot_current_state_reg[4]/Q
+                         net (fo=4, routed)           3.078     3.596    LUZ_A_OBUF[1]
+    V12                  OBUF (Prop_obuf_I_O)         3.570     7.167 r  LUZ_A_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     7.167    LUZ_A[1]
     V12                                                               r  LUZ_A[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 Inst_SEM/FSM_onehot_current_state_reg[3]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            LUZ_R[0]
-                            (output port)
+  Source:                 Inst_SEM/tiempo_inicio_reg[1]/G
+                            (positive level-sensitive latch)
+  Destination:            Inst_SEM/FSM_onehot_current_state_reg[1]/CE
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        7.112ns  (logic 4.100ns (57.652%)  route 3.012ns (42.348%))
-  Logic Levels:           3  (FDRE=1 LUT3=1 OBUF=1)
+  Data Path Delay:        6.632ns  (logic 2.746ns (41.403%)  route 3.886ns (58.597%))
+  Logic Levels:           13  (CARRY4=8 LDCE=1 LUT2=1 LUT5=1 LUT6=2)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y100         FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[3]/C
-    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/FSM_onehot_current_state_reg[3]/Q
-                         net (fo=4, routed)           0.898     1.354    Inst_SEM/Q[2]
-    SLICE_X1Y99          LUT3 (Prop_lut3_I1_O)        0.124     1.478 r  Inst_SEM/LUZ_R_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           2.114     3.592    LUZ_R_OBUF[0]
-    H17                  OBUF (Prop_obuf_I_O)         3.520     7.112 r  LUZ_R_OBUF[0]_inst/O
-                         net (fo=0)                   0.000     7.112    LUZ_R[0]
-    H17                                                               r  LUZ_R[0] (OUT)
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[8]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[2]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.973ns  (logic 2.314ns (33.184%)  route 4.659ns (66.816%))
-  Logic Levels:           10  (CARRY4=5 FDRE=1 LUT2=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y99          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[8]/C
-    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/k_reg[8]/Q
-                         net (fo=4, routed)           1.251     1.707    Inst_SEM/k_reg[8]
-    SLICE_X2Y99          LUT2 (Prop_lut2_I0_O)        0.124     1.831 r  Inst_SEM/next_state2_carry__0_i_18/O
-                         net (fo=1, routed)           0.000     1.831    Inst_SEM/next_state2_carry__0_i_18_n_0
-    SLICE_X2Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     2.344 r  Inst_SEM/next_state2_carry__0_i_10/CO[3]
-                         net (fo=1, routed)           0.001     2.344    Inst_SEM/next_state2_carry__0_i_10_n_0
+    SLICE_X2Y97          LDCE                         0.000     0.000 r  Inst_SEM/tiempo_inicio_reg[1]/G
+    SLICE_X2Y97          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  Inst_SEM/tiempo_inicio_reg[1]/Q
+                         net (fo=1, routed)           0.653     1.278    Inst_REL/i__carry__2_i_9_0[1]
+    SLICE_X2Y97          LUT2 (Prop_lut2_I1_O)        0.124     1.402 r  Inst_REL/i__carry_i_11/O
+                         net (fo=1, routed)           0.000     1.402    Inst_REL/i__carry_i_11_n_0
+    SLICE_X2Y97          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     1.935 r  Inst_REL/i__carry_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.935    Inst_REL/i__carry_i_3_n_0
+    SLICE_X2Y98          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.052 r  Inst_REL/i__carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000     2.052    Inst_REL/i__carry_i_8_n_0
+    SLICE_X2Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.169 r  Inst_REL/i__carry__0_i_10/CO[3]
+                         net (fo=1, routed)           0.001     2.170    Inst_REL/i__carry__0_i_10_n_0
     SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.461 r  Inst_SEM/next_state2_carry__0_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.461    Inst_SEM/next_state2_carry__0_i_9_n_0
+                                                      0.117     2.287 r  Inst_REL/i__carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.287    Inst_REL/i__carry__0_i_9_n_0
     SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.578 r  Inst_SEM/next_state2_carry__1_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.578    Inst_SEM/next_state2_carry__1_i_10_n_0
+                                                      0.117     2.404 r  Inst_REL/i__carry__1_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.404    Inst_REL/i__carry__1_i_10_n_0
     SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.695 r  Inst_SEM/next_state2_carry__1_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.695    Inst_SEM/next_state2_carry__1_i_9_n_0
-    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     3.010 f  Inst_SEM/next_state2_carry__2_i_10/O[3]
-                         net (fo=3, routed)           0.811     3.822    Inst_SEM/next_state3[27]
-    SLICE_X1Y102         LUT2 (Prop_lut2_I1_O)        0.307     4.129 f  Inst_SEM/FSM_onehot_current_state[4]_i_9/O
-                         net (fo=1, routed)           1.123     5.252    Inst_SEM/FSM_onehot_current_state[4]_i_9_n_0
-    SLICE_X1Y102         LUT6 (Prop_lut6_I0_O)        0.124     5.376 r  Inst_SEM/FSM_onehot_current_state[4]_i_4/O
-                         net (fo=1, routed)           0.800     6.176    Inst_SEM/FSM_onehot_current_state[4]_i_4_n_0
-    SLICE_X1Y100         LUT6 (Prop_lut6_I1_O)        0.124     6.300 r  Inst_SEM/FSM_onehot_current_state[4]_i_2/O
-                         net (fo=5, routed)           0.674     6.973    Inst_SEM/FSM_onehot_current_state[4]_i_2_n_0
-    SLICE_X0Y100         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[2]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[8]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[3]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.973ns  (logic 2.314ns (33.184%)  route 4.659ns (66.816%))
-  Logic Levels:           10  (CARRY4=5 FDRE=1 LUT2=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y99          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[8]/C
-    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/k_reg[8]/Q
-                         net (fo=4, routed)           1.251     1.707    Inst_SEM/k_reg[8]
-    SLICE_X2Y99          LUT2 (Prop_lut2_I0_O)        0.124     1.831 r  Inst_SEM/next_state2_carry__0_i_18/O
-                         net (fo=1, routed)           0.000     1.831    Inst_SEM/next_state2_carry__0_i_18_n_0
-    SLICE_X2Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     2.344 r  Inst_SEM/next_state2_carry__0_i_10/CO[3]
-                         net (fo=1, routed)           0.001     2.344    Inst_SEM/next_state2_carry__0_i_10_n_0
-    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.461 r  Inst_SEM/next_state2_carry__0_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.461    Inst_SEM/next_state2_carry__0_i_9_n_0
-    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.578 r  Inst_SEM/next_state2_carry__1_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.578    Inst_SEM/next_state2_carry__1_i_10_n_0
-    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.695 r  Inst_SEM/next_state2_carry__1_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.695    Inst_SEM/next_state2_carry__1_i_9_n_0
-    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     3.010 f  Inst_SEM/next_state2_carry__2_i_10/O[3]
-                         net (fo=3, routed)           0.811     3.822    Inst_SEM/next_state3[27]
-    SLICE_X1Y102         LUT2 (Prop_lut2_I1_O)        0.307     4.129 f  Inst_SEM/FSM_onehot_current_state[4]_i_9/O
-                         net (fo=1, routed)           1.123     5.252    Inst_SEM/FSM_onehot_current_state[4]_i_9_n_0
-    SLICE_X1Y102         LUT6 (Prop_lut6_I0_O)        0.124     5.376 r  Inst_SEM/FSM_onehot_current_state[4]_i_4/O
-                         net (fo=1, routed)           0.800     6.176    Inst_SEM/FSM_onehot_current_state[4]_i_4_n_0
-    SLICE_X1Y100         LUT6 (Prop_lut6_I1_O)        0.124     6.300 r  Inst_SEM/FSM_onehot_current_state[4]_i_2/O
-                         net (fo=5, routed)           0.674     6.973    Inst_SEM/FSM_onehot_current_state[4]_i_2_n_0
-    SLICE_X0Y100         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[3]/CE
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[8]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[4]/CE
-  Path Group:             (none)
-  Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.973ns  (logic 2.314ns (33.184%)  route 4.659ns (66.816%))
-  Logic Levels:           10  (CARRY4=5 FDRE=1 LUT2=2 LUT6=2)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y99          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[8]/C
-    SLICE_X3Y99          FDRE (Prop_fdre_C_Q)         0.456     0.456 r  Inst_SEM/k_reg[8]/Q
-                         net (fo=4, routed)           1.251     1.707    Inst_SEM/k_reg[8]
-    SLICE_X2Y99          LUT2 (Prop_lut2_I0_O)        0.124     1.831 r  Inst_SEM/next_state2_carry__0_i_18/O
-                         net (fo=1, routed)           0.000     1.831    Inst_SEM/next_state2_carry__0_i_18_n_0
-    SLICE_X2Y99          CARRY4 (Prop_carry4_S[0]_CO[3])
-                                                      0.513     2.344 r  Inst_SEM/next_state2_carry__0_i_10/CO[3]
-                         net (fo=1, routed)           0.001     2.344    Inst_SEM/next_state2_carry__0_i_10_n_0
-    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.461 r  Inst_SEM/next_state2_carry__0_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.461    Inst_SEM/next_state2_carry__0_i_9_n_0
-    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.578 r  Inst_SEM/next_state2_carry__1_i_10/CO[3]
-                         net (fo=1, routed)           0.000     2.578    Inst_SEM/next_state2_carry__1_i_10_n_0
-    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
-                                                      0.117     2.695 r  Inst_SEM/next_state2_carry__1_i_9/CO[3]
-                         net (fo=1, routed)           0.000     2.695    Inst_SEM/next_state2_carry__1_i_9_n_0
-    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_O[3])
-                                                      0.315     3.010 f  Inst_SEM/next_state2_carry__2_i_10/O[3]
-                         net (fo=3, routed)           0.811     3.822    Inst_SEM/next_state3[27]
-    SLICE_X1Y102         LUT2 (Prop_lut2_I1_O)        0.307     4.129 f  Inst_SEM/FSM_onehot_current_state[4]_i_9/O
-                         net (fo=1, routed)           1.123     5.252    Inst_SEM/FSM_onehot_current_state[4]_i_9_n_0
-    SLICE_X1Y102         LUT6 (Prop_lut6_I0_O)        0.124     5.376 r  Inst_SEM/FSM_onehot_current_state[4]_i_4/O
-                         net (fo=1, routed)           0.800     6.176    Inst_SEM/FSM_onehot_current_state[4]_i_4_n_0
-    SLICE_X1Y100         LUT6 (Prop_lut6_I1_O)        0.124     6.300 r  Inst_SEM/FSM_onehot_current_state[4]_i_2/O
-                         net (fo=5, routed)           0.674     6.973    Inst_SEM/FSM_onehot_current_state[4]_i_2_n_0
-    SLICE_X0Y100         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[4]/CE
+                                                      0.117     2.521 r  Inst_REL/i__carry__1_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.521    Inst_REL/i__carry__1_i_9_n_0
+    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.638 r  Inst_REL/i__carry__2_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.638    Inst_REL/i__carry__2_i_10_n_0
+    SLICE_X2Y104         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     2.857 f  Inst_REL/i__carry__2_i_9/O[0]
+                         net (fo=3, routed)           0.873     3.730    Inst_REL/next_state2[28]
+    SLICE_X3Y104         LUT6 (Prop_lut6_I0_O)        0.295     4.025 f  Inst_REL/FSM_onehot_current_state[4]_i_12/O
+                         net (fo=1, routed)           0.960     4.984    Inst_REL/FSM_onehot_current_state[4]_i_12_n_0
+    SLICE_X4Y101         LUT6 (Prop_lut6_I5_O)        0.124     5.108 f  Inst_REL/FSM_onehot_current_state[4]_i_4/O
+                         net (fo=3, routed)           1.021     6.129    Inst_REL/FSM_onehot_current_state[4]_i_4_n_0
+    SLICE_X2Y96          LUT5 (Prop_lut5_I1_O)        0.124     6.253 r  Inst_REL/FSM_onehot_current_state[4]_i_2/O
+                         net (fo=5, routed)           0.379     6.632    Inst_SEM/E[0]
+    SLICE_X3Y96          FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[1]/CE
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
@@ -518,17 +364,213 @@ Slack:                    inf
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        6.135ns  (logic 4.009ns (65.340%)  route 2.126ns (34.660%))
+  Data Path Delay:        6.498ns  (logic 4.071ns (62.643%)  route 2.427ns (37.357%))
   Logic Levels:           2  (FDSE=1 OBUF=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y101         FDSE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[0]/C
-    SLICE_X0Y101         FDSE (Prop_fdse_C_Q)         0.456     0.456 r  Inst_SEM/FSM_onehot_current_state_reg[0]/Q
-                         net (fo=5, routed)           2.126     2.582    LUZ_V_OBUF[0]
-    J13                  OBUF (Prop_obuf_I_O)         3.553     6.135 r  LUZ_V_OBUF[0]_inst/O
-                         net (fo=0)                   0.000     6.135    LUZ_V[0]
+    SLICE_X2Y96          FDSE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[0]/C
+    SLICE_X2Y96          FDSE (Prop_fdse_C_Q)         0.518     0.518 r  Inst_SEM/FSM_onehot_current_state_reg[0]/Q
+                         net (fo=5, routed)           2.427     2.945    LUZ_V_OBUF[0]
+    J13                  OBUF (Prop_obuf_I_O)         3.553     6.498 r  LUZ_V_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     6.498    LUZ_V[0]
     J13                                                               r  LUZ_V[0] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_SEM/tiempo_inicio_reg[1]/G
+                            (positive level-sensitive latch)
+  Destination:            Inst_SEM/FSM_onehot_current_state_reg[0]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.443ns  (logic 2.746ns (42.619%)  route 3.697ns (57.381%))
+  Logic Levels:           13  (CARRY4=8 LDCE=1 LUT2=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y97          LDCE                         0.000     0.000 r  Inst_SEM/tiempo_inicio_reg[1]/G
+    SLICE_X2Y97          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  Inst_SEM/tiempo_inicio_reg[1]/Q
+                         net (fo=1, routed)           0.653     1.278    Inst_REL/i__carry__2_i_9_0[1]
+    SLICE_X2Y97          LUT2 (Prop_lut2_I1_O)        0.124     1.402 r  Inst_REL/i__carry_i_11/O
+                         net (fo=1, routed)           0.000     1.402    Inst_REL/i__carry_i_11_n_0
+    SLICE_X2Y97          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     1.935 r  Inst_REL/i__carry_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.935    Inst_REL/i__carry_i_3_n_0
+    SLICE_X2Y98          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.052 r  Inst_REL/i__carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000     2.052    Inst_REL/i__carry_i_8_n_0
+    SLICE_X2Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.169 r  Inst_REL/i__carry__0_i_10/CO[3]
+                         net (fo=1, routed)           0.001     2.170    Inst_REL/i__carry__0_i_10_n_0
+    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.287 r  Inst_REL/i__carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.287    Inst_REL/i__carry__0_i_9_n_0
+    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.404 r  Inst_REL/i__carry__1_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.404    Inst_REL/i__carry__1_i_10_n_0
+    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.521 r  Inst_REL/i__carry__1_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.521    Inst_REL/i__carry__1_i_9_n_0
+    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.638 r  Inst_REL/i__carry__2_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.638    Inst_REL/i__carry__2_i_10_n_0
+    SLICE_X2Y104         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     2.857 f  Inst_REL/i__carry__2_i_9/O[0]
+                         net (fo=3, routed)           0.873     3.730    Inst_REL/next_state2[28]
+    SLICE_X3Y104         LUT6 (Prop_lut6_I0_O)        0.295     4.025 f  Inst_REL/FSM_onehot_current_state[4]_i_12/O
+                         net (fo=1, routed)           0.960     4.984    Inst_REL/FSM_onehot_current_state[4]_i_12_n_0
+    SLICE_X4Y101         LUT6 (Prop_lut6_I5_O)        0.124     5.108 f  Inst_REL/FSM_onehot_current_state[4]_i_4/O
+                         net (fo=3, routed)           1.021     6.129    Inst_REL/FSM_onehot_current_state[4]_i_4_n_0
+    SLICE_X2Y96          LUT5 (Prop_lut5_I1_O)        0.124     6.253 r  Inst_REL/FSM_onehot_current_state[4]_i_2/O
+                         net (fo=5, routed)           0.190     6.443    Inst_SEM/E[0]
+    SLICE_X2Y96          FDSE                                         r  Inst_SEM/FSM_onehot_current_state_reg[0]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_SEM/tiempo_inicio_reg[1]/G
+                            (positive level-sensitive latch)
+  Destination:            Inst_SEM/FSM_onehot_current_state_reg[2]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.443ns  (logic 2.746ns (42.619%)  route 3.697ns (57.381%))
+  Logic Levels:           13  (CARRY4=8 LDCE=1 LUT2=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y97          LDCE                         0.000     0.000 r  Inst_SEM/tiempo_inicio_reg[1]/G
+    SLICE_X2Y97          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  Inst_SEM/tiempo_inicio_reg[1]/Q
+                         net (fo=1, routed)           0.653     1.278    Inst_REL/i__carry__2_i_9_0[1]
+    SLICE_X2Y97          LUT2 (Prop_lut2_I1_O)        0.124     1.402 r  Inst_REL/i__carry_i_11/O
+                         net (fo=1, routed)           0.000     1.402    Inst_REL/i__carry_i_11_n_0
+    SLICE_X2Y97          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     1.935 r  Inst_REL/i__carry_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.935    Inst_REL/i__carry_i_3_n_0
+    SLICE_X2Y98          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.052 r  Inst_REL/i__carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000     2.052    Inst_REL/i__carry_i_8_n_0
+    SLICE_X2Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.169 r  Inst_REL/i__carry__0_i_10/CO[3]
+                         net (fo=1, routed)           0.001     2.170    Inst_REL/i__carry__0_i_10_n_0
+    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.287 r  Inst_REL/i__carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.287    Inst_REL/i__carry__0_i_9_n_0
+    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.404 r  Inst_REL/i__carry__1_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.404    Inst_REL/i__carry__1_i_10_n_0
+    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.521 r  Inst_REL/i__carry__1_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.521    Inst_REL/i__carry__1_i_9_n_0
+    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.638 r  Inst_REL/i__carry__2_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.638    Inst_REL/i__carry__2_i_10_n_0
+    SLICE_X2Y104         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     2.857 f  Inst_REL/i__carry__2_i_9/O[0]
+                         net (fo=3, routed)           0.873     3.730    Inst_REL/next_state2[28]
+    SLICE_X3Y104         LUT6 (Prop_lut6_I0_O)        0.295     4.025 f  Inst_REL/FSM_onehot_current_state[4]_i_12/O
+                         net (fo=1, routed)           0.960     4.984    Inst_REL/FSM_onehot_current_state[4]_i_12_n_0
+    SLICE_X4Y101         LUT6 (Prop_lut6_I5_O)        0.124     5.108 f  Inst_REL/FSM_onehot_current_state[4]_i_4/O
+                         net (fo=3, routed)           1.021     6.129    Inst_REL/FSM_onehot_current_state[4]_i_4_n_0
+    SLICE_X2Y96          LUT5 (Prop_lut5_I1_O)        0.124     6.253 r  Inst_REL/FSM_onehot_current_state[4]_i_2/O
+                         net (fo=5, routed)           0.190     6.443    Inst_SEM/E[0]
+    SLICE_X2Y96          FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[2]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_SEM/tiempo_inicio_reg[1]/G
+                            (positive level-sensitive latch)
+  Destination:            Inst_SEM/FSM_onehot_current_state_reg[3]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.443ns  (logic 2.746ns (42.619%)  route 3.697ns (57.381%))
+  Logic Levels:           13  (CARRY4=8 LDCE=1 LUT2=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y97          LDCE                         0.000     0.000 r  Inst_SEM/tiempo_inicio_reg[1]/G
+    SLICE_X2Y97          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  Inst_SEM/tiempo_inicio_reg[1]/Q
+                         net (fo=1, routed)           0.653     1.278    Inst_REL/i__carry__2_i_9_0[1]
+    SLICE_X2Y97          LUT2 (Prop_lut2_I1_O)        0.124     1.402 r  Inst_REL/i__carry_i_11/O
+                         net (fo=1, routed)           0.000     1.402    Inst_REL/i__carry_i_11_n_0
+    SLICE_X2Y97          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     1.935 r  Inst_REL/i__carry_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.935    Inst_REL/i__carry_i_3_n_0
+    SLICE_X2Y98          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.052 r  Inst_REL/i__carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000     2.052    Inst_REL/i__carry_i_8_n_0
+    SLICE_X2Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.169 r  Inst_REL/i__carry__0_i_10/CO[3]
+                         net (fo=1, routed)           0.001     2.170    Inst_REL/i__carry__0_i_10_n_0
+    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.287 r  Inst_REL/i__carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.287    Inst_REL/i__carry__0_i_9_n_0
+    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.404 r  Inst_REL/i__carry__1_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.404    Inst_REL/i__carry__1_i_10_n_0
+    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.521 r  Inst_REL/i__carry__1_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.521    Inst_REL/i__carry__1_i_9_n_0
+    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.638 r  Inst_REL/i__carry__2_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.638    Inst_REL/i__carry__2_i_10_n_0
+    SLICE_X2Y104         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     2.857 f  Inst_REL/i__carry__2_i_9/O[0]
+                         net (fo=3, routed)           0.873     3.730    Inst_REL/next_state2[28]
+    SLICE_X3Y104         LUT6 (Prop_lut6_I0_O)        0.295     4.025 f  Inst_REL/FSM_onehot_current_state[4]_i_12/O
+                         net (fo=1, routed)           0.960     4.984    Inst_REL/FSM_onehot_current_state[4]_i_12_n_0
+    SLICE_X4Y101         LUT6 (Prop_lut6_I5_O)        0.124     5.108 f  Inst_REL/FSM_onehot_current_state[4]_i_4/O
+                         net (fo=3, routed)           1.021     6.129    Inst_REL/FSM_onehot_current_state[4]_i_4_n_0
+    SLICE_X2Y96          LUT5 (Prop_lut5_I1_O)        0.124     6.253 r  Inst_REL/FSM_onehot_current_state[4]_i_2/O
+                         net (fo=5, routed)           0.190     6.443    Inst_SEM/E[0]
+    SLICE_X2Y96          FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[3]/CE
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_SEM/tiempo_inicio_reg[1]/G
+                            (positive level-sensitive latch)
+  Destination:            Inst_SEM/FSM_onehot_current_state_reg[4]/CE
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.443ns  (logic 2.746ns (42.619%)  route 3.697ns (57.381%))
+  Logic Levels:           13  (CARRY4=8 LDCE=1 LUT2=1 LUT5=1 LUT6=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X2Y97          LDCE                         0.000     0.000 r  Inst_SEM/tiempo_inicio_reg[1]/G
+    SLICE_X2Y97          LDCE (EnToQ_ldce_G_Q)        0.625     0.625 r  Inst_SEM/tiempo_inicio_reg[1]/Q
+                         net (fo=1, routed)           0.653     1.278    Inst_REL/i__carry__2_i_9_0[1]
+    SLICE_X2Y97          LUT2 (Prop_lut2_I1_O)        0.124     1.402 r  Inst_REL/i__carry_i_11/O
+                         net (fo=1, routed)           0.000     1.402    Inst_REL/i__carry_i_11_n_0
+    SLICE_X2Y97          CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     1.935 r  Inst_REL/i__carry_i_3/CO[3]
+                         net (fo=1, routed)           0.000     1.935    Inst_REL/i__carry_i_3_n_0
+    SLICE_X2Y98          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.052 r  Inst_REL/i__carry_i_8/CO[3]
+                         net (fo=1, routed)           0.000     2.052    Inst_REL/i__carry_i_8_n_0
+    SLICE_X2Y99          CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.169 r  Inst_REL/i__carry__0_i_10/CO[3]
+                         net (fo=1, routed)           0.001     2.170    Inst_REL/i__carry__0_i_10_n_0
+    SLICE_X2Y100         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.287 r  Inst_REL/i__carry__0_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.287    Inst_REL/i__carry__0_i_9_n_0
+    SLICE_X2Y101         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.404 r  Inst_REL/i__carry__1_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.404    Inst_REL/i__carry__1_i_10_n_0
+    SLICE_X2Y102         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.521 r  Inst_REL/i__carry__1_i_9/CO[3]
+                         net (fo=1, routed)           0.000     2.521    Inst_REL/i__carry__1_i_9_n_0
+    SLICE_X2Y103         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     2.638 r  Inst_REL/i__carry__2_i_10/CO[3]
+                         net (fo=1, routed)           0.000     2.638    Inst_REL/i__carry__2_i_10_n_0
+    SLICE_X2Y104         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     2.857 f  Inst_REL/i__carry__2_i_9/O[0]
+                         net (fo=3, routed)           0.873     3.730    Inst_REL/next_state2[28]
+    SLICE_X3Y104         LUT6 (Prop_lut6_I0_O)        0.295     4.025 f  Inst_REL/FSM_onehot_current_state[4]_i_12/O
+                         net (fo=1, routed)           0.960     4.984    Inst_REL/FSM_onehot_current_state[4]_i_12_n_0
+    SLICE_X4Y101         LUT6 (Prop_lut6_I5_O)        0.124     5.108 f  Inst_REL/FSM_onehot_current_state[4]_i_4/O
+                         net (fo=3, routed)           1.021     6.129    Inst_REL/FSM_onehot_current_state[4]_i_4_n_0
+    SLICE_X2Y96          LUT5 (Prop_lut5_I1_O)        0.124     6.253 r  Inst_REL/FSM_onehot_current_state[4]_i_2/O
+                         net (fo=5, routed)           0.190     6.443    Inst_SEM/E[0]
+    SLICE_X2Y96          FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[4]/CE
   -------------------------------------------------------------------    -------------------
 
 
@@ -538,173 +580,173 @@ Slack:                    inf
 Min Delay Paths
 --------------------------------------------------------------------------------------
 Slack:                    inf
-  Source:                 Inst_SEM/k_reg[12]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[12]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.331ns  (logic 0.141ns (42.545%)  route 0.190ns (57.455%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y100         FDRE                         0.000     0.000 r  Inst_SEM/k_reg[12]/C
-    SLICE_X3Y100         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[12]/Q
-                         net (fo=4, routed)           0.190     0.331    Inst_SEM/k_reg[12]
-    SLICE_X2Y100         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[12]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[16]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[16]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.331ns  (logic 0.141ns (42.545%)  route 0.190ns (57.455%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y101         FDRE                         0.000     0.000 r  Inst_SEM/k_reg[16]/C
-    SLICE_X3Y101         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[16]/Q
-                         net (fo=4, routed)           0.190     0.331    Inst_SEM/k_reg[16]
-    SLICE_X2Y101         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[16]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[20]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[20]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.331ns  (logic 0.141ns (42.545%)  route 0.190ns (57.455%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y102         FDRE                         0.000     0.000 r  Inst_SEM/k_reg[20]/C
-    SLICE_X3Y102         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[20]/Q
-                         net (fo=4, routed)           0.190     0.331    Inst_SEM/k_reg[20]
-    SLICE_X2Y102         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[20]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[24]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[24]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.331ns  (logic 0.141ns (42.545%)  route 0.190ns (57.455%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y103         FDRE                         0.000     0.000 r  Inst_SEM/k_reg[24]/C
-    SLICE_X3Y103         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[24]/Q
-                         net (fo=4, routed)           0.190     0.331    Inst_SEM/k_reg[24]
-    SLICE_X2Y103         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[24]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[28]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[28]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.331ns  (logic 0.141ns (42.545%)  route 0.190ns (57.455%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y104         FDRE                         0.000     0.000 r  Inst_SEM/k_reg[28]/C
-    SLICE_X3Y104         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[28]/Q
-                         net (fo=4, routed)           0.190     0.331    Inst_SEM/k_reg[28]
-    SLICE_X2Y104         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[28]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[4]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[4]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.331ns  (logic 0.141ns (42.545%)  route 0.190ns (57.455%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y98          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[4]/C
-    SLICE_X3Y98          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[4]/Q
-                         net (fo=4, routed)           0.190     0.331    Inst_SEM/k_reg[4]
-    SLICE_X2Y98          LDCE                                         r  Inst_SEM/tiempo_inicio_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/k_reg[0]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/tiempo_inicio_reg[0]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.333ns  (logic 0.141ns (42.281%)  route 0.192ns (57.719%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X3Y97          FDRE                         0.000     0.000 r  Inst_SEM/k_reg[0]/C
-    SLICE_X3Y97          FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/k_reg[0]/Q
-                         net (fo=4, routed)           0.192     0.333    Inst_SEM/k_reg[0]
-    SLICE_X2Y97          LDCE                                         r  Inst_SEM/tiempo_inicio_reg[0]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/FSM_onehot_current_state_reg[3]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[4]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.338ns  (logic 0.141ns (41.671%)  route 0.197ns (58.329%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X0Y100         FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[3]/C
-    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/FSM_onehot_current_state_reg[3]/Q
-                         net (fo=4, routed)           0.197     0.338    Inst_SEM/Q[2]
-    SLICE_X0Y100         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[4]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 Inst_SEM/FSM_onehot_current_state_reg[2]/C
-                            (rising edge-triggered cell FDRE)
-  Destination:            Inst_SEM/FSM_onehot_current_state_reg[3]/D
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.339ns  (logic 0.141ns (41.571%)  route 0.198ns (58.429%))
-  Logic Levels:           1  (FDRE=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X0Y100         FDRE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[2]/C
-    SLICE_X0Y100         FDRE (Prop_fdre_C_Q)         0.141     0.141 r  Inst_SEM/FSM_onehot_current_state_reg[2]/Q
-                         net (fo=4, routed)           0.198     0.339    Inst_SEM/FSM_onehot_current_state_reg_n_0_[2]
-    SLICE_X0Y100         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[3]/D
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
   Source:                 Inst_SEM/FSM_onehot_current_state_reg[0]/C
                             (rising edge-triggered cell FDSE)
   Destination:            Inst_SEM/FSM_onehot_current_state_reg[1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.350ns  (logic 0.141ns (40.263%)  route 0.209ns (59.737%))
+  Data Path Delay:        0.271ns  (logic 0.164ns (60.419%)  route 0.107ns (39.581%))
   Logic Levels:           1  (FDSE=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X0Y101         FDSE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[0]/C
-    SLICE_X0Y101         FDSE (Prop_fdse_C_Q)         0.141     0.141 r  Inst_SEM/FSM_onehot_current_state_reg[0]/Q
-                         net (fo=5, routed)           0.209     0.350    Inst_SEM/Q[0]
-    SLICE_X0Y101         FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[1]/D
+    SLICE_X2Y96          FDSE                         0.000     0.000 r  Inst_SEM/FSM_onehot_current_state_reg[0]/C
+    SLICE_X2Y96          FDSE (Prop_fdse_C_Q)         0.164     0.164 r  Inst_SEM/FSM_onehot_current_state_reg[0]/Q
+                         net (fo=5, routed)           0.107     0.271    Inst_SEM/Q[0]
+    SLICE_X3Y96          FDRE                                         r  Inst_SEM/FSM_onehot_current_state_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[8]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[8]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.304ns  (logic 0.141ns (46.425%)  route 0.163ns (53.575%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y99          FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[8]/C
+    SLICE_X0Y99          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[8]/Q
+                         net (fo=4, routed)           0.163     0.304    Inst_SEM/i__carry__2_i_11[8]
+    SLICE_X2Y99          LDCE                                         r  Inst_SEM/tiempo_inicio_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[17]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[17]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.319ns  (logic 0.141ns (44.201%)  route 0.178ns (55.799%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y101         FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[17]/C
+    SLICE_X0Y101         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[17]/Q
+                         net (fo=4, routed)           0.178     0.319    Inst_SEM/i__carry__2_i_11[17]
+    SLICE_X2Y101         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[1]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.319ns  (logic 0.141ns (44.201%)  route 0.178ns (55.799%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y97          FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[1]/C
+    SLICE_X0Y97          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[1]/Q
+                         net (fo=4, routed)           0.178     0.319    Inst_SEM/i__carry__2_i_11[1]
+    SLICE_X2Y97          LDCE                                         r  Inst_SEM/tiempo_inicio_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[29]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.319ns  (logic 0.141ns (44.201%)  route 0.178ns (55.799%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y104         FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[29]/C
+    SLICE_X0Y104         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[29]/Q
+                         net (fo=4, routed)           0.178     0.319    Inst_SEM/i__carry__2_i_11[29]
+    SLICE_X2Y104         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[21]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[21]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.324ns  (logic 0.141ns (43.514%)  route 0.183ns (56.486%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y102         FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[21]/C
+    SLICE_X0Y102         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[21]/Q
+                         net (fo=4, routed)           0.183     0.324    Inst_SEM/i__carry__2_i_11[21]
+    SLICE_X2Y102         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[21]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[30]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[30]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.326ns  (logic 0.141ns (43.244%)  route 0.185ns (56.756%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y104         FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[30]/C
+    SLICE_X0Y104         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[30]/Q
+                         net (fo=4, routed)           0.185     0.326    Inst_SEM/i__carry__2_i_11[30]
+    SLICE_X2Y104         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[30]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[0]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.327ns  (logic 0.141ns (43.120%)  route 0.186ns (56.880%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y97          FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[0]/C
+    SLICE_X0Y97          FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[0]/Q
+                         net (fo=4, routed)           0.186     0.327    Inst_SEM/i__carry__2_i_11[0]
+    SLICE_X2Y97          LDCE                                         r  Inst_SEM/tiempo_inicio_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[16]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[16]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.328ns  (logic 0.141ns (42.985%)  route 0.187ns (57.015%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y101         FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[16]/C
+    SLICE_X0Y101         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[16]/Q
+                         net (fo=4, routed)           0.187     0.328    Inst_SEM/i__carry__2_i_11[16]
+    SLICE_X2Y101         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 Inst_REL/segundo_reg[20]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            Inst_SEM/tiempo_inicio_reg[20]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.328ns  (logic 0.141ns (42.985%)  route 0.187ns (57.015%))
+  Logic Levels:           1  (FDCE=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y102         FDCE                         0.000     0.000 r  Inst_REL/segundo_reg[20]/C
+    SLICE_X0Y102         FDCE (Prop_fdce_C_Q)         0.141     0.141 r  Inst_REL/segundo_reg[20]/Q
+                         net (fo=4, routed)           0.187     0.328    Inst_SEM/i__carry__2_i_11[20]
+    SLICE_X2Y102         LDCE                                         r  Inst_SEM/tiempo_inicio_reg[20]/D
   -------------------------------------------------------------------    -------------------
 
 

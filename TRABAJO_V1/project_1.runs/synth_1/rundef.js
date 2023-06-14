@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log tb_SEMAFORO3.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source tb_SEMAFORO3.tcl" );
+         "-log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl" );
 
 
 
