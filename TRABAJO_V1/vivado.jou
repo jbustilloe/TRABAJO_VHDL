@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Jun 14 17:54:46 2023
-# Process ID: 12324
+# Start of session at: Fri Jun 16 11:43:57 2023
+# Process ID: 20476
 # Current directory: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9328 C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO_V1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19692 C:\Users\yagob\Documents\GitHub\TRABAJO_VHDL\TRABAJO_V1\project_1.xpr
 # Log file: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/vivado.log
 # Journal file: C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1\vivado.jou
 # Running On: DESKTOP-F1T6GG3, OS: Windows, CPU Frequency: 1992 MHz, CPU Physical cores: 4, Host memory: 8464 MB
@@ -13,12 +13,11 @@
 start_gui
 open_project C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.xpr
 update_compile_order -fileset sources_1
-# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
-set_property source_mgmt_mode None [current_project]
-set_property top top [current_fileset]
-# Re-enabling previously disabled source management mode.
-set_property source_mgmt_mode All [current_project]
-update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
 reset_run synth_1
 launch_runs synth_1 -jobs 4
 wait_on_run synth_1
@@ -26,3 +25,90 @@ launch_runs impl_1 -jobs 4
 wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+undo
+undo
+undo
+undo
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+update_compile_order -fileset sources_1
+launch_simulation
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+launch_simulation
+open_wave_config C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/tb_SEMAFORO_behav.wcfg
+source tb_SEMAFORO3.tcl
+restart
+run all
+relaunch_sim
+close_sim
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+wait_on_run synth_1
+launch_runs impl_1 -jobs 4
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]

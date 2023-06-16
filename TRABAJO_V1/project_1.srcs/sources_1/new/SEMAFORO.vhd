@@ -7,7 +7,6 @@ entity SEMAFORO is
         RESET : in std_logic;
         CLK : in std_logic;
         CLK2 : in std_logic;
-        k : in natural;
         SENSOR : in std_logic;
         LUZ_R : out std_logic_vector(0 TO 1);
         LUZ_V : out std_logic_vector(0 TO 1);
@@ -20,7 +19,7 @@ architecture behavioral of SEMAFORO  is
     signal next_state: STATES;--Indica el siguiente estado
     signal tiempo_inicio: NATURAL;
     signal a: NATURAL := 0;
-    
+    signal k: NATURAL:=0;
    
 begin
 
@@ -33,7 +32,18 @@ begin
         current_state <= S0;
     end if;
  end if;
+ end process;
+time_register: process (RESET, CLK2)
+begin
     
+ if rising_edge(CLK2 ) then
+    k<=k+1;
+    if RESET = '0' then--si pulsamos RESET volvemos al estado S0
+        k<=0;
+        a<=0;
+    end if;
+ end if;
+ 
 end process;
 nextstate_decod: process (SENSOR, current_state, k)
  begin

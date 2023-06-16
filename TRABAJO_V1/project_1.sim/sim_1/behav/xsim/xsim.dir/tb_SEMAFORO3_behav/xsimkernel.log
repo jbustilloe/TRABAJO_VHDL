@@ -1,7 +1,7 @@
-Running: xsim.dir/tb_SEMAFORO3_behav/xsimk.exe -simmode gui -wdb tb_SEMAFORO3_behav.wdb -simrunnum 0 -socket 63514
+Running: xsim.dir/tb_SEMAFORO3_behav/xsimk.exe -simmode gui -wdb tb_SEMAFORO3_behav.wdb -simrunnum 0 -socket 51787
 Design successfully loaded
-Design Loading Memory Usage: 7128 KB (Peak: 7128 KB)
-Design Loading CPU Usage: 62 ms
+Design Loading Memory Usage: 7632 KB (Peak: 7632 KB)
+Design Loading CPU Usage: 15 ms
 Simulation completed
-Simulation Memory Usage: 15632 KB (Peak: 15632 KB)
-Simulation CPU Usage: 100875 ms
+Simulation Memory Usage: 8048 KB (Peak: 8048 KB)
+Simulation CPU Usage: 15 ms
