@@ -17,9 +17,9 @@ architecture behavioral of SEMAFORO  is
     type STATES is (S0, S1, S2, S3, S4);--los estados son posibles conbinaciones de los dos semaforos
     signal current_state: STATES := S0;--Indica el estado en el que se encuentra el programa
     signal next_state: STATES;--Indica el siguiente estado
-    signal tiempo_inicio: NATURAL;
-    signal a: NATURAL := 0;
-    signal k: NATURAL:=0;
+    signal tiempo_inicio: NATURAL;-- segundo en el que se inicia una iteracion
+    signal a: NATURAL := 0;--si a=0 la iteracion que vemos es la primera, mientras que si a/=0 la iteracion es otra
+    signal k: NATURAL:=0;--k es el segundo en el que estamos desde el inicio de la cuenta
    
 begin
 
@@ -30,6 +30,7 @@ begin
     current_state<=next_state;--introduce el siguiente estado en el estado actual
     if RESET = '0' then--si pulsamos RESET volvemos al estado S0
         current_state <= S0;
+        
     end if;
  end if;
  end process;

@@ -43,7 +43,7 @@ architecture tb of tb_SEMAFORO is
     signal LUZ_V  : std_logic_vector (0 to 1);
     signal LUZ_A  : std_logic_vector (0 to 1);
 
-    constant TbPeriod : time := 1000 ns;
+    constant TbPeriod : time := 10 ns;
     constant TbPeriod2 : time := 1000000000 ns;
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';

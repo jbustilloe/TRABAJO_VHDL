@@ -39,14 +39,12 @@ signal synk_out: std_logic;
 signal edge: std_logic;
 
 begin
-
 Inst_REL: Reloj PORT MAP
 (
     CLK2 => CLK2,
     CLK=>CLK,
     RESET=>RESET
  );
-
 Inst_SEM: SEMAFORO PORT MAP
  (
     CLK2 => CLK2,
@@ -57,7 +55,5 @@ Inst_SEM: SEMAFORO PORT MAP
     LUZ_A =>LUZ_A,
     LUZ_V =>LUZ_V
 );
-
-
 end Behavioral;
 
