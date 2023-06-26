@@ -14,7 +14,7 @@ end Reloj;
 architecture Behavioral of Reloj is
 
 
-Signal Cont1:  integer range 0 to 100000000 := 0;
+Signal Cont1:  integer range 0 to 50000000 := 0;
 signal Salida: std_logic;
 
 
@@ -26,7 +26,7 @@ if RESET = '0' then
     Cont1 <= 0;
     Salida<='0';
 elsif rising_edge (CLK) then
-    if (cont1 = 100000000) then 
+    if (cont1 = 50000000) then 
             salida<=NOT(salida);
             cont1<=0;
     else

@@ -58,7 +58,12 @@ begin
         wait for TbPeriod2*10;
         SENSOR<='0';
         
-        wait for 25*TbPeriod2;   --Segundo coche que llega, llega cuando el semaforo vuelve a estar en rojo. (t=41s)
+        wait for 5*TbPeriod2;--Segundo coche que llega que pasa de largo porque el semaforo ya esta en verde (t=20s)
+        SENSOR<='1';
+        wait for TbPeriod2;
+        SENSOR<='0';
+        
+        wait for 15*TbPeriod2;   --TERCER coche que llega, llega cuando el semaforo vuelve a estar en rojo. (t=41s)
         SENSOR<='1';            --tiene que esperar a que pasen los 20s minimos para que se vuelva a poner en verde 
         wait for TbPeriod2*20;  
         SENSOR<='0';

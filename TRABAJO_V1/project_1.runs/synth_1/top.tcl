@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
@@ -81,7 +80,6 @@ set_property webtalk.parent_dir C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRA
 set_property parent.project_path C:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/yagob/Downloads/vivado-boards-master/new/board_files/nexys4_ddr} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
 set_property ip_output_repo c:/Users/yagob/Documents/GitHub/TRABAJO_VHDL/TRABAJO_V1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
